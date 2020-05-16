@@ -1,0 +1,8 @@
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\bin\Debug\LibreriaRecursos.dll
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\bin\Debug\LibreriaRecursos.pdb
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.g.resources
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.Properties.Resources.resources
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.csproj.GenerateResource.cache
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.csproj.CoreCompileInputs.cache
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.dll
+C:\Users\javie\source\repos\BelifeWPf\LibreriaRecursos\obj\Debug\LibreriaRecursos.pdb
