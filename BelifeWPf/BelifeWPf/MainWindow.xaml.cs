@@ -33,5 +33,35 @@ namespace BelifeWPf
         {
             fly.IsOpen = true;
         }
+
+        private void Cerrar(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Minimizar(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void BtCliente_Click(object sender, RoutedEventArgs e)
+        {
+            TCPrincipal.SelectedIndex = 0;
+        }
+
+        private void BtBusCliente_click(object sender, RoutedEventArgs e)
+        {
+            TCPrincipal.SelectedIndex = 1;
+        }
+
+        private void BtContrato_Click(object sender, RoutedEventArgs e)
+        {
+            TCPrincipal.SelectedIndex = 2;
+        }
+
+        private void BtbusContrato_Click(object sender, RoutedEventArgs e)
+        {
+            TCPrincipal.SelectedIndex = 3;
+        }
     }
 }

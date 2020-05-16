@@ -22,3 +22,27 @@ C:\Users\javie\source\repos\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CopyC
 C:\Users\javie\source\repos\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.exe
 C:\Users\javie\source\repos\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.pdb
 C:\Users\javie\source\repos\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionario.baml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.exe.config
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.exe
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\ControlzEx.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\ControlzEx.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.xml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csprojAssemblyReference.cache
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\MainWindow.g.cs
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\App.g.cs
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf_MarkupCompile.cache
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf_MarkupCompile.lref
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\App.baml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionario.baml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\MainWindow.baml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.g.resources
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.Properties.Resources.resources
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.GenerateResource.cache
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CopyComplete
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.exe
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.pdb
