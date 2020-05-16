@@ -17,9 +17,9 @@
         <Border CornerRadius="30" Background="LightGray"/>
         <!--TAP CONTROL-->
         <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
-            <mah:MetroTabItem Header="prueba" Margin="682,74,-683,-73">
+            <mah:MetroTabItem Name="TBI1" Header="" Margin="360,48,-361,-47">
                 <Grid>
-                    <Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png"/>
+                    
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
@@ -50,17 +50,35 @@
 
                     </Border>
 
+                </Grid>
+            </mah:MetroTabItem>
 
+            <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
+                <Grid>
+                    <Border Style="{DynamicResource BarraInferior}"/>
+                    
+                </Grid>
+            </mah:MetroTabItem>
+            
+            <mah:MetroTabItem Name="TBI3" Header="" Margin="360,48,-361,-47">
+                <Grid>
+                    <Border Style="{DynamicResource BarraInferior}"/>
+                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
+                    <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
+                    <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
+                    <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
+                </Grid>
+            </mah:MetroTabItem>
+
+            <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
+                <Grid>
+                    <Border Style="{DynamicResource BarraInferior}"/>
 
                 </Grid>
-
-
-
-
-
-
-
             </mah:MetroTabItem>
+
+
+
         </mah:MetroTabControl>
         <!--TAP CONTROL-->
 
@@ -71,23 +89,47 @@
         <!--BOTON PARA DESPLEGAR FLYOUT-->
 
         <!--BOTON PARA CERRAR LA APP-->
-        <Button Style="{DynamicResource boton360}" Name="Btn_CerrarApp" Margin="936,0,31,544">
+        <Button Style="{DynamicResource boton360}" Name="Btn_CerrarApp" Margin="936,0,31,544" Click="Cerrar">
             <Image Style="{DynamicResource Imagen360}" Source="Imagenes/Cross Close.png" />
         </Button>
         <!--BOTON PARA CERRAR LA APP-->
 
         <!--BOTON PARA MINIMIZAR LA APP-->
-        <Button Style="{DynamicResource boton360}" Name="Btn_MinApp" Height="24" Margin="915,16,60,560" >
+        <Button Style="{DynamicResource boton360}" Name="Btn_MinApp" Height="24" Margin="915,16,60,560" Click="Minimizar" >
             <Image Style="{DynamicResource Imagen360}" Source="Imagenes/CircledArrow Topleft -02.png"  />
         </Button>
         <!--BOTON PARA MINIMIZAR LA APP-->
 
-        <mah:Flyout x:Name="fly" Background="Black" Opacity="0.7" Margin="0,72" Foreground="#FFD6D6D6" Width="148">
-            <Canvas>
+        <mah:Flyout x:Name="fly" Background="Black" Opacity="0.7" Margin="0,72" Foreground="#FFD6D6D6" Width="108">
+            <Canvas Height="384">
 
+                <Button x:Name="BtCliente" Background="Transparent" Canvas.Left="18" Canvas.Top="10" Click="BtCliente_Click" Height="76" Width="73" Padding="0,0,0,0" >
+                    <StackPanel>
+                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Registro cliente" FontSize="8.5"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtBusCliente" Background="Transparent" Canvas.Left="18" Canvas.Top="96"  Height="76" Width="73" Padding="0,0,0,0" Click="BtBusCliente_click" >
+                    <StackPanel>
+                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Listado clientes" FontSize="8.5"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtContrato" Background="Transparent" Canvas.Left="18" Canvas.Top="182"  Height="76" Width="73" Padding="0,0,0,0" Click="BtContrato_Click" >
+                    <StackPanel>
+                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Registro Contrato"  FontSize="8.5"/></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtbusContrato" Background="Transparent" Canvas.Left="18" Canvas.Top="268" Height="76" Width="73" Padding="0,0,0,0" Click="BtbusContrato_Click" >
+                    <StackPanel>
+                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Listado contratos" FontSize="8.5"/></TextBlock>
+                    </StackPanel>
+                </Button>
             </Canvas>
         </mah:Flyout>
-
+        <Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png" Margin="22,10,778,539"/>
 
 
 
