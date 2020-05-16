@@ -111,19 +111,19 @@
                 </Button>
                 <Button x:Name="BtBusCliente" Background="Transparent" Canvas.Left="18" Canvas.Top="96"  Height="76" Width="73" Padding="0,0,0,0" Click="BtBusCliente_click" >
                     <StackPanel>
-                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <Image Source="Imagenes/ListadoCliente.png" Height="48" Width="55"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Listado clientes" FontSize="8.5"/></TextBlock>
                     </StackPanel>
                 </Button>
                 <Button x:Name="BtContrato" Background="Transparent" Canvas.Left="18" Canvas.Top="182"  Height="76" Width="73" Padding="0,0,0,0" Click="BtContrato_Click" >
                     <StackPanel>
-                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <Image Source="Imagenes/Contrato.png" Height="48" Width="55"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Registro Contrato"  FontSize="8.5"/></TextBlock>
                     </StackPanel>
                 </Button>
                 <Button x:Name="BtbusContrato" Background="Transparent" Canvas.Left="18" Canvas.Top="268" Height="76" Width="73" Padding="0,0,0,0" Click="BtbusContrato_Click" >
                     <StackPanel>
-                        <Image Source="Imagenes/User.png" Height="48" Width="55"/>
+                        <Image Source="Imagenes/Contrato1.png" Height="48" Width="55"/>
                         <TextBlock HorizontalAlignment="Center" FontWeight="Normal" Foreground="White" ><Run Text="Listado contratos" FontSize="8.5"/></TextBlock>
                     </StackPanel>
                 </Button>
