@@ -21,12 +21,25 @@
                 <Grid>
                     
                     <Border Style="{DynamicResource BarraInferior}"/>
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="719,83,105,425" Content="Buscar  " Height="Auto" Width="Auto"/>
 
+                    <!--LABEL-->
+                    <Label Style="{DynamicResource Label}" Content="Estado Civil:" Margin="309,408,471,113"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Fecha de Nacimiento:" Margin="217,344,563,177"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Sexo:" Margin="372,273,408,248"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Apellidos:" Margin="331,212,449,309"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Nombres:" Margin="331,150,449,371"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Rut:" Margin="387,90,393,431"></Label>
+                    <!--LABEL-->
 
+                    <!--INPUT-->
                     <Border Style="{DynamicResource Input1}" Margin="442,90,304,431">
                         <TextBox Style="{DynamicResource Input2}"/>
                     </Border>
@@ -49,6 +62,7 @@
                     <Border Style="{DynamicResource Input1}" Margin="442,408,304,113">
 
                     </Border>
+                    <!--INPUT-->
 
                 </Grid>
             </mah:MetroTabItem>
@@ -67,6 +81,7 @@
                     <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
+                    
                 </Grid>
             </mah:MetroTabItem>
 
@@ -83,9 +98,7 @@
         <!--TAP CONTROL-->
 
         <!--BOTON PARA DESPLEGAR FLYOUT-->
-        <Button Style="{DynamicResource boton360}" Height="26" Margin="10,66,957,477" Name="Btn_despliegaFly" Click="Btn_despliegaFly_Click">
-            <Image Style="{DynamicResource Imagen360}" Source="Imagenes/Submit-01-WF.png"/>
-        </Button>
+        <Button Name="Btn_despliegaFly" Margin="0,72,984,72" Background="#FF363636" BorderBrush="#FF363636" mah:ButtonHelper.CornerRadius="0,20,20,0" Padding="1" BorderThickness="0,0,1,0" Foreground="#FF363636" Click="Btn_despliegaFly_Click"/>
         <!--BOTON PARA DESPLEGAR FLYOUT-->
 
         <!--BOTON PARA CERRAR LA APP-->
