@@ -47,21 +47,25 @@ namespace BelifeWPf
         private void BtCliente_Click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 0;
+            fly.IsOpen = false;
         }
 
         private void BtBusCliente_click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 1;
+            fly.IsOpen = false;
         }
 
         private void BtContrato_Click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 2;
+            fly.IsOpen = false;
         }
 
         private void BtbusContrato_Click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 3;
+            fly.IsOpen = false;
         }
     }
 }
