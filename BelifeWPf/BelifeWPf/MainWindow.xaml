@@ -12,6 +12,12 @@
         Background="Transparent" AllowsTransparency="True" 
         WindowStartupLocation="CenterScreen" 
         MaxHeight="600" MaxWidth="1000" ResizeBorderThickness="0" ResizeMode="NoResize" TitlebarHeight="0" TitleCaps="False" WindowButtonCommandsOverlayBehavior="Never" WindowStyle="None">
+    <mah:MetroWindow.NonActiveBorderBrush>
+        <ImageBrush/>
+    </mah:MetroWindow.NonActiveBorderBrush>
+    <mah:MetroWindow.BorderBrush>
+        <ImageBrush/>
+    </mah:MetroWindow.BorderBrush>
 
     <Grid>
         <Border CornerRadius="30" Background="LightGray"/>
@@ -70,7 +76,45 @@
             <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
-                    
+                    <!--<Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png"/>-->
+                    <Border Style="{DynamicResource BarraInferior}"/>
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de Clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
+                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar "/>
+
+
+                    <Border Background="#FF858585" Margin="25,88,10,93" CornerRadius="20,20,20,20">
+                        <DataGrid Background="Transparent" Margin="10"/>
+                    </Border>
+
+                    <!--LABEL-->
+                    <Label Style="{DynamicResource Label2}" Content="Rut Cliente:" Margin="101,486,679,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Sexo:" Margin="351,486,429,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Estado Civil:" Margin="595,486,185,35"></Label>
+                    <!--LABEL-->
+
+
+                    <!--CONTROL DE FILTROS-->
+                    <Border Style="{DynamicResource Input3}" Margin="580,510,200,7">
+                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="337,510,443,7">
+                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
+                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                    </Border>
+                    <!--CONTROL DE FILTROS-->
+
+
+
+
+
+
+
+
+
                 </Grid>
             </mah:MetroTabItem>
             
@@ -78,7 +122,7 @@
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
-                    <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
+                    <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Terminar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
                     
