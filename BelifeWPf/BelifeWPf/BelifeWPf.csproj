@@ -121,5 +121,11 @@
   <ItemGroup>
     <Resource Include="Imagenes\Submit-01-WF.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Contrato.png" />
+    <Resource Include="Imagenes\Contrato1.png" />
+    <Resource Include="Imagenes\ListadoCliente.png" />
+    <Resource Include="Imagenes\User.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
