@@ -165,7 +165,9 @@
                         <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
                     <!--CONTROL DE FILTROS-->
-
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   "/>
                     
                 </Grid>
