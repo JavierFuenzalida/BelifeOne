@@ -105,6 +105,42 @@
     </Style>
     <!--BOTON REDONDIADO EN SOLO 3 ESQUINAS (LIMPIAR)-->
 
+    <!--BOTON REDONDIADO EN LAS 4 ESQUINAS (Buscar)-->
+    <Style TargetType="Button" x:Key="BotonCurvo2">
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="FontFamily" Value="Nirmala UI"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Foreground" Value="LightGray"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="#707070" BorderThickness="1" Background="#FF363636">
+                            <ContentPresenter HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                      TextElement.FontWeight="Normal">
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="Black"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#3C7FB1"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#2C628B"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--BOTON REDONDIADO EN LAS 4 ESQUINAS (Buscar)-->
+
     <!--TAMAÑO DE IMAGEN PARA BOTONES-->
     <Style TargetType="Image" x:Key="ImagenBotones">
         <Setter Property="Height" Value="41"/>
@@ -126,7 +162,18 @@
     </Style>
     <!--BARRA INFERIOR DE CONTROLES-->
 
+    <!--BARRA INFERIOR DE TITULO-->
+    <Style TargetType="Border" x:Key="BarraTitulos">
+        <Setter Property="Background" Value="#FF363636"/>
+        <Setter Property="Height" Value="37"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Margin" Value="700,0,0,497"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="CornerRadius" Value="20,0,0,20"/>
+    </Style>
+    <!--BARRA INFERIOR DE CONTROLES-->
 
+    <!--BORDER PARA INCERTAR CONTROLES INPUT-->
     <Style TargetType="Border" x:Key="Input1">
         <Setter Property="Padding" Value="0"/>
         <Setter Property="CornerRadius" Value="0,20,20,0"/>
@@ -136,9 +183,11 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="Background" Value="White"/>
     </Style>
+    <!--BORDER PARA INCERTAR CONTROLES INPUT-->
 
-    
-    
+
+
+    <!--CONTROL TEXTBOX-->
     <Style TargetType="TextBox" x:Key="Input2">
         <Setter Property="Width" Value="250"/>
         <Setter Property="Height" Value="40"/>
@@ -151,6 +200,33 @@
 
     </Style>
 
+    <!---BORDER PARA INCERTAR CONTROLES INPUT y CONTROL TEXTBOX (Listado de cliente y contrato)-->
+    <Style TargetType="Border" x:Key="Input3">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="CornerRadius" Value="20,20,20,20"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Background" Value="LightGray"/>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="Input4">
+        <Setter Property="Width" Value="216"/>
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="CaretBrush" Value="Transparent"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+    </Style>
+    <!---BORDER PARA INCERTAR CONTROLES INPUT y CONTROL TEXTBOX (Listado de cliente y contrato)-->
+    
+    
+    <!--CONTROL TEXTBOX-->
+
     <!--<Style TargetType="ComboBox" x:Key="ComboBox">
         <Setter Property="Width" Value="250"/>
         <Setter Property="Height" Value="40"/>
@@ -161,6 +237,26 @@
         
         <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>-->
+
+    <!--LABEL-->
+    <Style TargetType="Label" x:Key="Label">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="FontFamily" Value="Nirmala UI"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    <!--LABEL-->
+
+    <!--LABEL-->
+    <Style TargetType="Label" x:Key="Label2">
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="FontFamily" Value="Nirmala UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="white"/>
+    </Style>
+    <!--LABEL-->
 
 
 
