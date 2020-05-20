@@ -23,6 +23,11 @@
         <Border CornerRadius="30" Background="LightGray"/>
         <!--TAP CONTROL-->
         <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 1
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI1" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     
@@ -72,7 +77,11 @@
 
                 </Grid>
             </mah:MetroTabItem>
-
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 2
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
@@ -84,7 +93,7 @@
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar "/>
 
 
-                    <Border Background="#FF858585" Margin="25,88,10,93" CornerRadius="20,20,20,20">
+                    <Border Background="#FF858585" Margin="205,85,20,103" CornerRadius="20,20,20,20">
                         <DataGrid Background="Transparent" Margin="10"/>
                     </Border>
 
@@ -108,15 +117,12 @@
                     <!--CONTROL DE FILTROS-->
 
 
-
-
-
-
-
-
-
                 </Grid>
             </mah:MetroTabItem>
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 3
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
             
             <mah:MetroTabItem Name="TBI3" Header="" Margin="360,48,-361,-47">
                 <Grid>
@@ -128,11 +134,42 @@
                     
                 </Grid>
             </mah:MetroTabItem>
-
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 4
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
 
+                    <Border Background="#FF858585" Margin="205,85,20,103" CornerRadius="20,20,20,20">
+                        <DataGrid Background="Transparent" Margin="10"/>
+                    </Border>
+
+                    <!--LABEL-->
+                    <Label Style="{DynamicResource Label2}" Content="N° de contrato:" Margin="101,486,679,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Rut cliente:" Margin="351,486,429,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Poliza:" Margin="595,486,185,35"></Label>
+                    <!--LABEL-->
+
+
+                    <!--CONTROL DE FILTROS-->
+                    <Border Style="{DynamicResource Input3}" Margin="580,510,200,7">
+                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="337,510,443,7">
+                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
+                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                    </Border>
+                    <!--CONTROL DE FILTROS-->
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
+                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   "/>
+                    
                 </Grid>
             </mah:MetroTabItem>
 
