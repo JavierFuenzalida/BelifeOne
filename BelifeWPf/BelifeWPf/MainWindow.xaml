@@ -22,7 +22,7 @@
     <Grid>
         <Border CornerRadius="30" Background="LightGray" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
         <!--TAP CONTROL-->
-        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
+        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent" SelectionChanged="TCPrincipal_SelectionChanged" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
             
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 1
@@ -52,26 +52,22 @@
 
                     <!--INPUT-->
                     <Border Style="{DynamicResource Input1}" Margin="442,90,304,431">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxRut" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,150,304,371">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxNombres" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,212,304,309">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxApellidos" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,274,304,247">
-                        <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" mah:TextBoxHelper.Watermark="&lt;Seleccione&gt;" mah:TextBoxHelper.WatermarkAlignment="Center" SnapsToDevicePixels="True" Cursor="Arrow" IsSynchronizedWithCurrentItem="False" >
-                            <ListBoxItem Content="hola" Background="Transparent" mah:ItemHelper.DisabledForegroundBrush="LightGray">
-
-                            </ListBoxItem>
-                        </ComboBox>
+                        <ComboBox x:Name="CbSexo" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" SelectionChanged="Cbsexo_SelectionChanged"  />
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,344,304,177">
-
+                        <DatePicker x:Name="DpFechaNacimiento" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" VerticalAlignment="Center"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,408,304,113">
-
+                        <ComboBox x:Name="CbEstadoCivil" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray"  SelectedIndex="-1"   />
                     </Border>
                     <!--INPUT-->
 
