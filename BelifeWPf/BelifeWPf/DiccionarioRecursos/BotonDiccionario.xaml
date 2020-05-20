@@ -195,7 +195,7 @@
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontSize" Value="18"/>
-        <Setter Property="CaretBrush" Value="Transparent"/>
+        <Setter Property="CaretBrush" Value="Gray"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
 
     </Style>
