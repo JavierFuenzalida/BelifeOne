@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Behaviours;
+using BeLife.Negocio;
 
 namespace BelifeWPf
 {
@@ -29,6 +30,9 @@ namespace BelifeWPf
         public MainWindow()
         {
             InitializeComponent();
+
+            CargarSexo();
+            CargarEstado();
         }
 
         private void Btn_despliegaFly_Click(object sender, RoutedEventArgs e)
@@ -57,6 +61,7 @@ namespace BelifeWPf
         {
             TCPrincipal.SelectedIndex = 0;
             fly.IsOpen = false;
+
         }
 
         private void BtBusCliente_click(object sender, RoutedEventArgs e)
@@ -82,6 +87,16 @@ namespace BelifeWPf
             this.DragMove();
         }
 
+        private void TCPrincipal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Cbsexo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
 
 
         /*
@@ -91,7 +106,50 @@ namespace BelifeWPf
 
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
+        private void Limpiar()
+        {
 
+            TxRut.Text = string.Empty;
+            TxNombres.Text = string.Empty;
+            TxApellidos.Text = string.Empty;
+            DpFechaNacimiento.SelectedDate = DateTime.Today;
+            CbSexo.SelectedIndex = 0;
+            CbEstadoCivil.SelectedIndex = 0;
+
+            CargarSexo();
+            CargarEstado();
+            //CargarCliente();
+
+        }
+
+
+        private void CargarSexo()
+        {
+            /* Carga todas los cliente */
+            Sexo sexo = new Sexo();
+            CbSexo.ItemsSource = sexo.ReadAllSexo();
+
+            /* Configura los datos en el ComboBOx */
+            CbSexo.DisplayMemberPath = "Descripcion"; //Propiedad para mostrar
+            CbSexo.SelectedValuePath = "Descripcion"; //Propiedad con el valor a rescatar
+
+            CbSexo.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
+
+        private void CargarEstado()
+        {
+            /* Carga todas los cliente */
+            Estado estado = new Estado();
+            CbEstadoCivil.ItemsSource = estado.ReadAllEstado();
+
+            /* Configura los datos en el ComboBOx */
+            CbEstadoCivil.DisplayMemberPath = "Descripcion"; //Propiedad para mostrar
+            CbEstadoCivil.SelectedValuePath = "Descripcion"; //Propiedad con el valor a rescatar
+
+            CbEstadoCivil.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
 
 
 
