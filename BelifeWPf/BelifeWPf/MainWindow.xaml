@@ -20,7 +20,7 @@
     </mah:MetroWindow.BorderBrush>
 
     <Grid>
-        <Border CornerRadius="30" Background="LightGray"/>
+        <Border CornerRadius="30" Background="LightGray" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
         <!--TAP CONTROL-->
         <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
             
@@ -93,8 +93,10 @@
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar "/>
 
 
-                    <Border Background="#FF858585" Margin="205,85,20,103" CornerRadius="20,20,20,20">
-                        <DataGrid Background="Transparent" Margin="10"/>
+                    <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
+                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+
+                        </DataGrid>
                     </Border>
 
                     <!--LABEL-->
@@ -206,8 +208,10 @@
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
 
-                    <Border Background="#FF858585" Margin="205,85,20,103" CornerRadius="20,20,20,20">
-                        <DataGrid Background="Transparent" Margin="10"/>
+                    <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
+                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+
+                        </DataGrid>
                     </Border>
 
                     <!--LABEL-->

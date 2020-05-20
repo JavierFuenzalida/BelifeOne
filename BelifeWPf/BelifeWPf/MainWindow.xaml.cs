@@ -77,6 +77,11 @@ namespace BelifeWPf
             fly.IsOpen = false;
         }
 
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
 
 
         /*
