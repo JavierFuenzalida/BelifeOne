@@ -24,6 +24,8 @@ namespace BelifeWPf
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,10 +36,17 @@ namespace BelifeWPf
             fly.IsOpen = true;
         }
 
-        private void Cerrar(object sender, RoutedEventArgs e)
+        private async void Cerrar(object sender, RoutedEventArgs e)
         {
-            Close();
+            MessageDialogResult Result = await this.ShowMessageAsync("Confirmación", "¿Está Seguro que Desea Cerrar la Aplicación?", MessageDialogStyle.AffirmativeAndNegative);
+
+            if (Result == MessageDialogResult.Affirmative)
+            {
+                this.Close();
+            }
         }
+
+
 
         private void Minimizar(object sender, RoutedEventArgs e)
         {
