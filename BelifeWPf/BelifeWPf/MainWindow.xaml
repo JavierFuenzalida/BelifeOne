@@ -20,9 +20,14 @@
     </mah:MetroWindow.BorderBrush>
 
     <Grid>
-        <Border CornerRadius="30" Background="LightGray"/>
+        <Border CornerRadius="30" Background="LightGray" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
         <!--TAP CONTROL-->
         <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 1
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI1" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     
@@ -72,7 +77,11 @@
 
                 </Grid>
             </mah:MetroTabItem>
-
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 2
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
@@ -84,8 +93,10 @@
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar "/>
 
 
-                    <Border Background="#FF858585" Margin="25,88,10,93" CornerRadius="20,20,20,20">
-                        <DataGrid Background="Transparent" Margin="10"/>
+                    <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
+                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+
+                        </DataGrid>
                     </Border>
 
                     <!--LABEL-->
@@ -108,31 +119,124 @@
                     <!--CONTROL DE FILTROS-->
 
 
-
-
-
-
-
-
-
                 </Grid>
             </mah:MetroTabItem>
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 3
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
             
             <mah:MetroTabItem Name="TBI3" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de Contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
+                    <!--BOTON-->
                     <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Terminar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
                     <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
-                    
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="494,73,466,448" Height="Auto" Width="Auto"/>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448" Content="Listado Contratos " Height="Auto" Width="Auto"/>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447" Content="Listado Clientes " Height="Auto" Width="Auto"/>
+                    <!--BOTON-->
+
+                    <!--LABEL-->
+                    <Label Style="{DynamicResource Label}" Content="Nº Contrato:" Margin="83,74,697,447"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Rut Cliente:" Margin="93,132,687,389"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Nombre Completo:" Margin="18,189,762,332"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Tipo de Plan:" Margin="78,252,702,269"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Nº poliza:" Margin="108,312,672,209"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Observaciones:" Margin="58,374,722,147"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Fecha Creaciòn:" Margin="576,132,204,389"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Inicio Vigencia:" Margin="581,192,199,329"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Fin Vigencia:" Margin="604,252,176,269"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Prima Anual:" Margin="604,310,176,211"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Prima Mensual:" Margin="579,370,201,151"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Declaraciòn Salud:" Margin="550,431,230,90"></Label>
+                    <Label Style="{DynamicResource Label}" Content="Vigente:" Margin="790,431,-10,90"></Label>
+                    <!--LABEL-->
+
+
+                    <!--IMPUT-->
+                    <Border Style="{DynamicResource Input1}" Margin="216,74,530,447">
+                        <TextBox Style="{DynamicResource Input2}"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="216,132,530,389">
+                        <TextBox Style="{DynamicResource Input2}"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="216,192,530,329">
+                        <TextBox Style="{DynamicResource Input2}" IsReadOnly="True"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="216,252,530,269">
+                        <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="216,312,530,209">
+                        <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" IsReadOnly="True"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="736,250,10,271">
+                        <DatePicker Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="736,192,10,329">
+                        <DatePicker Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="736,132,10,389">
+                        <DatePicker Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="216,374,530,77" Height="Auto" Width="Auto">
+                        <TextBox Style="{DynamicResource Input2}" Height="Auto" Margin="1,9" MinLines="4" />
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="736,310,10,211">
+                        <TextBox Style="{DynamicResource Input2}" IsReadOnly="True"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input1}" Margin="736,370,10,151">
+                        <TextBox Style="{DynamicResource Input2}" IsReadOnly="True"/>
+                    </Border>
+                    <CheckBox Background="White" Margin="881,440,101,101" IsEnabled="False"/>
+                    <CheckBox Background="White" Margin="736,440,246,101"/>
+                    <!--IMPUT-->
+
                 </Grid>
             </mah:MetroTabItem>
-
+            
+            <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                                        Tab item 4
+            |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+            
             <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
 
+                    <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
+                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+
+                        </DataGrid>
+                    </Border>
+
+                    <!--LABEL-->
+                    <Label Style="{DynamicResource Label2}" Content="N° de contrato:" Margin="101,486,679,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Rut cliente:" Margin="351,486,429,35"></Label>
+                    <Label Style="{DynamicResource Label2}" Content="Poliza:" Margin="595,486,185,35"></Label>
+                    <!--LABEL-->
+
+
+                    <!--CONTROL DE FILTROS-->
+                    <Border Style="{DynamicResource Input3}" Margin="580,510,200,7">
+                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="337,510,443,7">
+                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                    </Border>
+                    <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
+                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                    </Border>
+                    <!--CONTROL DE FILTROS-->
+                    <Border Style="{DynamicResource BarraTitulos}">
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                    </Border>
+                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   "/>
+                    
                 </Grid>
             </mah:MetroTabItem>
 

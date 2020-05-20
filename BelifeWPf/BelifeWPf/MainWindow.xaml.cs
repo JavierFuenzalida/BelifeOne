@@ -24,6 +24,8 @@ namespace BelifeWPf
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,10 +36,17 @@ namespace BelifeWPf
             fly.IsOpen = true;
         }
 
-        private void Cerrar(object sender, RoutedEventArgs e)
+        private async void Cerrar(object sender, RoutedEventArgs e)
         {
-            Close();
+            MessageDialogResult Result = await this.ShowMessageAsync("Confirmación", "¿Está Seguro que Desea Cerrar la Aplicación?", MessageDialogStyle.AffirmativeAndNegative);
+
+            if (Result == MessageDialogResult.Affirmative)
+            {
+                this.Close();
+            }
         }
+
+
 
         private void Minimizar(object sender, RoutedEventArgs e)
         {
@@ -67,5 +76,55 @@ namespace BelifeWPf
             TCPrincipal.SelectedIndex = 3;
             fly.IsOpen = false;
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+
+
+        /*
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+
+                                        TabItem 1 Registrar cliente
+
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+        */
+
+
+
+
+        /*
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+
+                                        TabItem 2 Lista clientes
+
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+        */
+
+
+
+
+        /*
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+
+                                        TabItem 3 Registrar contrato
+
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+        */
+
+
+
+
+        /*
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+
+                                        TabItem 4 Lista contratos
+
+        0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+        */
+
+
     }
 }
