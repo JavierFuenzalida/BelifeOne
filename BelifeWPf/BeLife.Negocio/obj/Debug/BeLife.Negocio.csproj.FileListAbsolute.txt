@@ -27,18 +27,3 @@ C:\Users\HP\Desktop\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.Cor
 C:\Users\HP\Desktop\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CopyComplete
 C:\Users\HP\Desktop\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.dll
 C:\Users\HP\Desktop\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.pdb
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.dll.config
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.dll
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.pdb
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.dll
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.dll
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.pdb
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.dll.config
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.xml
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csprojAssemblyReference.cache
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CoreCompileInputs.cache
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CopyComplete
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.dll
-C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.pdb

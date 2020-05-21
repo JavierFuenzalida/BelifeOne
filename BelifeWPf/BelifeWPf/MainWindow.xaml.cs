@@ -392,7 +392,15 @@ namespace BelifeWPf
             Contrato contrato = new Contrato();
             DGListadoContrato.ItemsSource = contrato.ReadAll();
         }
+        public void BFiltro()
+        {
+            Contrato con = new Contrato();
+            DGListadoContrato.ItemsSource = con.ReadS(TxNumFiltroContrato.Text, TxRutFiltroContrato.Text, CBFiltroNumPoliza.SelectedIndex);
+        }//filtro
 
-        
+        private void Filtrarcont(object sender, RoutedEventArgs e)
+        {
+            BFiltro();
+        }
     }
 }
