@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1082
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelifeWPf", "BelifeWPf\BelifeWPf.csproj", "{EE4A55E9-C721-4B7C-9F27-CE8AEC4D8B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeLife.Datos", "BeLife.Datos\BeLife.Datos.csproj", "{18B5112D-BD17-451F-8A0B-FE3BC65C8FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeLife.Negocio", "BeLife.Negocio\BeLife.Negocio.csproj", "{F5EE0442-3DA5-4374-912E-1721C28D4269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EE4A55E9-C721-4B7C-9F27-CE8AEC4D8B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE4A55E9-C721-4B7C-9F27-CE8AEC4D8B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE4A55E9-C721-4B7C-9F27-CE8AEC4D8B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B5112D-BD17-451F-8A0B-FE3BC65C8FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B5112D-BD17-451F-8A0B-FE3BC65C8FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B5112D-BD17-451F-8A0B-FE3BC65C8FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B5112D-BD17-451F-8A0B-FE3BC65C8FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EE0442-3DA5-4374-912E-1721C28D4269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EE0442-3DA5-4374-912E-1721C28D4269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EE0442-3DA5-4374-912E-1721C28D4269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EE0442-3DA5-4374-912E-1721C28D4269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

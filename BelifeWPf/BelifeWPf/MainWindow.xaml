@@ -22,7 +22,7 @@
     <Grid>
         <Border CornerRadius="30" Background="LightGray" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
         <!--TAP CONTROL-->
-        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent">
+        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent" SelectionChanged="TCPrincipal_SelectionChanged" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
             
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 1
@@ -35,11 +35,11 @@
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar "/>
-                    <Button Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar "/>
-                    <Button Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Modificar "/>
-                    <Button Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Guardar "/>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="719,83,105,425" Content="Buscar  " Height="Auto" Width="Auto"/>
+                    <Button x:Name="BtLimpiarCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar " Click="BtLimpiarCliente_Click"/>
+                    <Button x:Name="BtEliminarCliente"  Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar " Click="BtEliminarCliente_Click"/>
+                    <Button x:Name="BtActualizarCliente" Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Actualizar " Click="BtActualizarCliente_Click"/>
+                    <Button x:Name="BtRegistrarCliente"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Registrar " Click="BtRegistrarCliente_Click_1"/>
+                    <Button x:Name="BtBuscarCliente" Style="{DynamicResource BotonCurvo2}" Margin="719,83,105,425" Content="Buscar  " Height="Auto" Width="Auto" Click="BtBuscarCliente_Click"/>
 
                     <!--LABEL-->
                     <Label Style="{DynamicResource Label}" Content="Estado Civil:" Margin="309,408,471,113"></Label>
@@ -52,27 +52,25 @@
 
                     <!--INPUT-->
                     <Border Style="{DynamicResource Input1}" Margin="442,90,304,431">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxRut" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,150,304,371">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxNombres" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,212,304,309">
-                        <TextBox Style="{DynamicResource Input2}"/>
+                        <TextBox x:Name="TxApellidos" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,274,304,247">
-                        <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" mah:TextBoxHelper.Watermark="&lt;Seleccione&gt;" mah:TextBoxHelper.WatermarkAlignment="Center" SnapsToDevicePixels="True" Cursor="Arrow" IsSynchronizedWithCurrentItem="False" >
-                            <ListBoxItem Content="hola" Background="Transparent" mah:ItemHelper.DisabledForegroundBrush="LightGray">
-
-                            </ListBoxItem>
-                        </ComboBox>
+                        <ComboBox x:Name="CbSexo" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" SelectionChanged="Cbsexo_SelectionChanged"  />
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,344,304,177">
-
+                        <DatePicker x:Name="DpFechaNacimiento" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" VerticalAlignment="Center"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,408,304,113">
-
+                        <ComboBox x:Name="CbEstadoCivil" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray"  SelectedIndex="-1" SelectionChanged="CbEstadoCivil_SelectionChanged"   />
                     </Border>
+
+
                     <!--INPUT-->
 
                 </Grid>
@@ -90,11 +88,11 @@
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de Clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar "/>
+                    <Button x:Name="BtFiltroListadoCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar " Click="BtFiltroListadoCliente_Click"/>
 
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
-                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+                        <DataGrid x:Name="DGlistadoClientes"  Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
 
                         </DataGrid>
                     </Border>
@@ -108,13 +106,13 @@
 
                     <!--CONTROL DE FILTROS-->
                     <Border Style="{DynamicResource Input3}" Margin="580,510,200,7">
-                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                        <ComboBox x:Name="CbFiltrarEstadoCivil" Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
                     </Border>
                     <Border Style="{DynamicResource Input3}" Margin="337,510,443,7">
-                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                        <ComboBox x:Name="CbFiltrarSexo" Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
                     </Border>
                     <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
-                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                        <TextBox x:Name="TxFiltrarRut" Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
                     <!--CONTROL DE FILTROS-->
 
@@ -209,7 +207,7 @@
                     <Border Style="{DynamicResource BarraInferior}"/>
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
-                        <DataGrid Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+                        <DataGrid  Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
 
                         </DataGrid>
                     </Border>
