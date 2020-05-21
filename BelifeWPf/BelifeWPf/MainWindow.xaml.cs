@@ -30,9 +30,15 @@ namespace BelifeWPf
         public MainWindow()
         {
             InitializeComponent();
+            //regristro Cliente
+            Limpiar();
+            CargarCliente();
 
-            CargarSexo();
-            CargarEstado();
+            //BtFiltroListadoCliente 
+            LimpiarF();
+            CargarEstadoF();
+            CargarSexoF();
+
         }
 
         private void Btn_despliegaFly_Click(object sender, RoutedEventArgs e)
@@ -106,7 +112,7 @@ namespace BelifeWPf
 
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
-        private void Limpiar()
+        public void Limpiar()
         {
 
             TxRut.Text = string.Empty;
@@ -115,16 +121,17 @@ namespace BelifeWPf
             DpFechaNacimiento.SelectedDate = DateTime.Today;
             CbSexo.SelectedIndex = 0;
             CbEstadoCivil.SelectedIndex = 0;
-
+            
             CargarSexo();
             CargarEstado();
             //CargarCliente();
-
+            
         }
 
 
-        private void CargarSexo()
+        public void CargarSexo()
         {
+            
             /* Carga todas los cliente */
             Sexo sexo = new Sexo();
             CbSexo.ItemsSource = sexo.ReadAllSexo();
@@ -137,7 +144,7 @@ namespace BelifeWPf
 
         }
 
-        private void CargarEstado()
+        public void CargarEstado()
         {
             /* Carga todas los cliente */
             Estado estado = new Estado();
@@ -150,6 +157,126 @@ namespace BelifeWPf
             CbEstadoCivil.SelectedIndex = 0; //Posiciona en el primer registro
 
         }
+                      
+
+
+        //basura
+        private void CbEstadoCivil_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        //
+
+        //BOTON REGISTRAR cliente listo no tocar 
+        private async void BtRegistrarCliente_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            Cliente cli = new Cliente()
+            {
+                RutCliente = TxRut.Text,
+                Nombres = TxNombres.Text,
+                Apellidos = TxApellidos.Text,
+                FechaNacimiento = DateTime.Today,
+                IdSexo = CbSexo.SelectedValue.ToString(),
+                IdEstadoCivil = CbEstadoCivil.SelectedValue.ToString()
+            };
+
+
+            if (cli.Create())
+            {
+                await this.ShowMessageAsync("Exito", "Cliente Registrado");
+                Limpiar();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Error", "No se registro el Cliente");
+            }
+        }
+
+
+        //BOTON BUSCAR
+        private async void BtBuscarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            //BOTON BUSCAR SI el cliente esta registrado
+            Cliente cli = new Cliente()
+            {
+                RutCliente = TxRut.Text
+            };
+
+            if (cli.Read())
+            {
+                TxNombres.Text = cli.Nombres;
+                TxApellidos.Text = cli.Apellidos;
+                DpFechaNacimiento.SelectedDate = cli.FechaNacimiento;
+                CbSexo.SelectedValue = cli.IdSexo;
+                CbEstadoCivil.SelectedValue = cli.IdEstadoCivil;
+
+
+                await this.ShowMessageAsync("Exito", "Cliente Leído");
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Cliente No ha sido Leído");
+            }
+        }
+
+
+
+        //BOTON ACTUALIZAR
+        private async void BtActualizarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            //BOTON ACTUALIZAR datos del cliente
+            Cliente cli = new Cliente()
+            {
+                RutCliente = TxRut.Text,
+                Nombres = TxNombres.Text,
+                Apellidos = TxApellidos.Text,
+                FechaNacimiento = DpFechaNacimiento.SelectedDate.Value,
+                IdSexo = CbSexo.SelectedValue.ToString(),
+                IdEstadoCivil = CbEstadoCivil.SelectedValue.ToString()
+
+            };
+
+            if (cli.Update())
+            {
+                await this.ShowMessageAsync("Exito", "Cliente Actualizado");
+                Limpiar();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Cliente no pudo ser Actualizado");
+            }
+        }
+
+
+        //BOTON ELIMINAR
+        private async void BtEliminarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            //BOTON ELIMINAR al cliente 
+            Cliente cli = new Cliente()
+            {
+                RutCliente = TxRut.Text
+            };
+            if (cli.Delete())
+            {
+                await this.ShowMessageAsync("Exito", "Cliente Eliminado");
+                Limpiar();
+
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Cliente No Pudo Ser Eliminado");
+            }
+        }
+
+        private void BtLimpiarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            Limpiar();
+        }
+
+
+
+
 
 
 
@@ -161,8 +288,65 @@ namespace BelifeWPf
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
 
+        private void LimpiarF()
+        {
+
+            TxFiltrarRut.Text = string.Empty;
+            CbFiltrarSexo.SelectedIndex = 0;
+            CbFiltrarEstadoCivil.SelectedIndex = 0;
+           
+            CargarSexoF();
+            CargarEstadoF();
+            
+
+        }
+
+        private void CargarSexoF()
+        {
+            /* Carga todas los cliente */
+            Sexo sexo = new Sexo();
+            CbFiltrarSexo.ItemsSource = sexo.ReadAllSexo();
+
+            /* Configura los datos en el ComboBOx */
+            CbFiltrarSexo.DisplayMemberPath = "Descripcion"; //Propiedad para mostrar
+            CbFiltrarSexo.SelectedValuePath = "IdSexo"; //Propiedad con el valor a rescatar
+            CbFiltrarSexo.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
+        private void CargarEstadoF()
+        {
+            /* Carga todas los cliente */
+            Estado estado = new Estado();
+            CbFiltrarEstadoCivil.ItemsSource = estado.ReadAllEstado();
+
+            /* Configura los datos en el ComboBOx */
+            CbFiltrarEstadoCivil.DisplayMemberPath = "Descripcion"; //Propiedad para mostrar
+            CbFiltrarEstadoCivil.SelectedValuePath = "IdEstadoCivi"; //Propiedad con el valor a rescatar
+            CbFiltrarEstadoCivil.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
 
 
+        public void CargarCliente()
+        {
+
+            //cargar los empleados en la data grid 
+            Cliente clientes = new Cliente();
+            DGlistadoClientes.ItemsSource = clientes.ReadAll();
+
+
+        }
+
+        public void filtro()
+        {
+            Cliente cli = new Cliente();
+            DGlistadoClientes.ItemsSource = cli.ReadSE(TxFiltrarRut.Text, CbFiltrarSexo.SelectedIndex, CbFiltrarEstadoCivil.SelectedIndex);
+        }
+
+        private void BtFiltroListadoCliente_Click(object sender, RoutedEventArgs e)
+        {
+            filtro();
+        }
 
         /*
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 

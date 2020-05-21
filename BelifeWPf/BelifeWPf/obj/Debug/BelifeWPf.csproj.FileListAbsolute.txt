@@ -103,3 +103,5 @@ C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.
 C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.xml
 C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\Icons.baml
 C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.xml
