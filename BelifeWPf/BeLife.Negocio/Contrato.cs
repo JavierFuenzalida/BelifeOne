@@ -166,17 +166,23 @@ namespace BeLife.Negocio
             return listadoContrato;
         }
 
-        public IEnumerable<Contrato> ReadS(string numero, String rut, int poliza)
+        public IEnumerable<Contrato> ReadS(string numero, String rut, string poliza)
         {
-            if (rut.Length > 0 && numero.Length > 0 && poliza > 0)
+            Datos.BeLifeEntities bbdd = new Datos.BeLifeEntities();
+            
+            Datos.Plan pl = bbdd.Plan.First(e => e.PolizaActual == poliza);
+
+
+
+            if (rut.Length > 0 && numero.Length > 0 && poliza.Length > 0)
             {
                 IEnumerable<Contrato> abc = from d in ReadAll()
-                                            where d.RutCliente == rut && d.Numero == numero.ToString() && d.CodigoPlan == poliza.ToString()
+                                            where d.RutCliente == rut && d.Numero == numero.ToString() && d.CodigoPlan == pl.IdPlan.ToString()
                                             select d;
                 return abc;
             }
 
-            else if (rut.Length > 0 && numero.Length > 0 && poliza == 0)
+            else if (rut.Length > 0 && numero.Length > 0 && poliza.Length == 0)
             {
                 IEnumerable<Contrato> ab = from d in ReadAll()
                                            where d.RutCliente == rut && d.Numero == numero.ToString()
@@ -185,15 +191,15 @@ namespace BeLife.Negocio
             }
 
 
-            else if (rut.Length > 0 && numero.Length == 0 && poliza > 0)
+            else if (rut.Length > 0 && numero.Length == 0 && poliza.Length > 0)
             {
                 IEnumerable<Contrato> ac = from d in ReadAll()
-                                           where d.RutCliente == rut && d.CodigoPlan == poliza.ToString()
+                                           where d.RutCliente == rut && d.CodigoPlan == pl.IdPlan.ToString()
                                            select d;
                 return ac;
             }
 
-            else if (rut.Length > 0 && numero.Length == 0 && poliza == 0)
+            else if (rut.Length > 0 && numero.Length == 0 && poliza.Length == 0)
             {
                 IEnumerable<Contrato> a = from d in ReadAll()
                                           where d.RutCliente == rut
@@ -201,24 +207,24 @@ namespace BeLife.Negocio
                 return a;
             }
 
-            else if (numero.Length > 0 && poliza > 0)
+            else if (numero.Length > 0 && poliza.Length > 0)
             {
                 IEnumerable<Contrato> ac = from d in ReadAll()
-                                           where d.Numero == numero.ToString() && d.CodigoPlan == poliza.ToString()
+                                           where d.Numero == numero.ToString() && d.CodigoPlan == pl.IdPlan.ToString()
                                            select d;
                 return ac;
             }
-            else if (numero.Length > 0 && poliza == 0)
+            else if (numero.Length > 0 && poliza.Length == 0)
             {
                 IEnumerable<Contrato> a = from d in ReadAll()
                                           where d.Numero == numero.ToString()
                                           select d;
                 return a;
             }
-            else if (numero.Length == 0 && poliza > 0)
+            else if (numero.Length == 0 && poliza.Length > 0)
             {
                 IEnumerable<Contrato> c = from d in ReadAll()
-                                          where d.CodigoPlan == poliza.ToString()
+                                          where d.CodigoPlan == pl.IdPlan.ToString()
                                           select d;
                 return c;
 

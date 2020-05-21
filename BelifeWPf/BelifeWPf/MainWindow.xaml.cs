@@ -44,6 +44,7 @@ namespace BelifeWPf
 
             //Listado de contratos
             CargarContratos();
+            CargarPoliza();
 
         }
 
@@ -392,10 +393,24 @@ namespace BelifeWPf
             Contrato contrato = new Contrato();
             DGListadoContrato.ItemsSource = contrato.ReadAll();
         }
+
+        private void CargarPoliza()
+        {
+            /* Carga todas los cliente */
+            Plan pl = new Plan();
+            CBFiltroNumPoliza.ItemsSource = pl.ReadAllPlan();
+
+            /* Configura los datos en el ComboBOx */
+            CBFiltroNumPoliza.DisplayMemberPath = "PolizaActual"; //Propiedad para mostrar
+            CBFiltroNumPoliza.SelectedValuePath = "PolizaActual"; //Propiedad con el valor a rescatar
+            CBFiltroNumPoliza.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
+
         public void BFiltro()
         {
             Contrato con = new Contrato();
-            DGListadoContrato.ItemsSource = con.ReadS(TxNumFiltroContrato.Text, TxRutFiltroContrato.Text, CBFiltroNumPoliza.SelectedIndex);
+            DGListadoContrato.ItemsSource = con.ReadS(TxNumFiltroContrato.Text, TxRutFiltroContrato.Text, CBFiltroNumPoliza.SelectedValue.ToString());
         }//filtro
 
         private void Filtrarcont(object sender, RoutedEventArgs e)
