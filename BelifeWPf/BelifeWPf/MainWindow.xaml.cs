@@ -39,6 +39,12 @@ namespace BelifeWPf
             CargarEstadoF();
             CargarSexoF();
 
+            //registro contrato
+
+
+            //Listado de contratos
+            CargarContratos();
+
         }
 
         private void Btn_despliegaFly_Click(object sender, RoutedEventArgs e)
@@ -356,7 +362,20 @@ namespace BelifeWPf
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
 
+        //cargar el combobox 
+        private void CargarContrato()
+        {
+            //Carga todas los contratos */
+            Plan plan = new Plan();
+            CbCodigoPlan.ItemsSource = plan.ReadAllPlan();
 
+            /* Configura los datos en el ComboBOx */
+            CbCodigoPlan.DisplayMemberPath = "IdPlan"; //Propiedad para mostrar
+            CbCodigoPlan.SelectedValuePath = "IdPlan"; //Propiedad con el valor a rescatar
+
+            CbCodigoPlan.SelectedIndex = 0; //Posiciona en el primer registro
+
+        }
 
 
         /*
@@ -367,6 +386,13 @@ namespace BelifeWPf
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
 
+        private void CargarContratos()
+        {
+            /* Carga todos los Empleados */
+            Contrato contrato = new Contrato();
+            DGListadoContrato.ItemsSource = contrato.ReadAll();
+        }
 
+        
     }
 }
