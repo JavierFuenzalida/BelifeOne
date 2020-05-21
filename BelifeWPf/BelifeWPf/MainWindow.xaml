@@ -168,7 +168,7 @@
                         <TextBox Style="{DynamicResource Input2}" IsReadOnly="True"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="216,252,530,269">
-                        <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                        <ComboBox Name="CbCodigoPlan" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="216,312,530,209">
                         <ComboBox Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" IsReadOnly="True"/>
@@ -204,10 +204,10 @@
             
             <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
                 <Grid>
-                    <Border Style="{DynamicResource BarraInferior}"/>
+                    <Border Style="{DynamicResource BarraInferior}" HorizontalAlignment="Left" Margin="0" Width="1000"/>
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
-                        <DataGrid  Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+                        <DataGrid  Name="DGListadoContrato" IsReadOnly="True"   Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
 
                         </DataGrid>
                     </Border>
@@ -221,19 +221,19 @@
 
                     <!--CONTROL DE FILTROS-->
                     <Border Style="{DynamicResource Input3}" Margin="580,510,200,7">
-                        <ComboBox Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent"/>
+                        <ComboBox Name="CBFiltroNumPoliza" Width="216" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" SelectedIndex="0"/>
                     </Border>
                     <Border Style="{DynamicResource Input3}" Margin="337,510,443,7">
-                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                        <TextBox Name="TxRutFiltroContrato" Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
                     <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
-                        <TextBox Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
+                        <TextBox Name="TxNumFiltroContrato" Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
                     <!--CONTROL DE FILTROS-->
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   "/>
+                    <Button  Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   " Click="Filtrarcont"/>
                     
                 </Grid>
             </mah:MetroTabItem>
