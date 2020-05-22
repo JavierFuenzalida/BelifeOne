@@ -54,8 +54,7 @@ namespace BeLife.Negocio
             {
 
                 Estado esta = new Estado();
-                CommonBC.Syncronize(dato, esta);
-
+                CommonBC.Syncronize(dato, esta);                
                 listadoEstado.Add(esta);
             }
 
