@@ -80,6 +80,9 @@ namespace BelifeWPf
         private void BtBusCliente_click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 1;
+
+            CargarCliente();
+
             fly.IsOpen = false;
         }
 
@@ -92,6 +95,9 @@ namespace BelifeWPf
         private void BtbusContrato_Click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 3;
+
+            CargarContratos();
+
             fly.IsOpen = false;
         }
 
@@ -354,6 +360,10 @@ namespace BelifeWPf
         private void BtFiltroListadoCliente_Click(object sender, RoutedEventArgs e)
         {
             filtro();
+        }
+        private void Btnrefresliscli(object sender, MouseButtonEventArgs e)
+        {
+            CargarCliente();
         }
 
         /*
@@ -650,6 +660,8 @@ namespace BelifeWPf
         }
 
 
+
+
         private void BtLimpiarContrato_Click(object sender, RoutedEventArgs e)
         {
             LimpiarControles();
@@ -684,6 +696,48 @@ namespace BelifeWPf
             CbCodigoPlan.IsEnabled = true;
             TxNContrato.IsEnabled = true;
         }
+
+        // Filtro al listado de contrato
+        public void FiltroCli()
+        {
+            Cliente cli = new Cliente();
+            DGlistadoClientes.ItemsSource = cli.FilCli(TxRutCliente.Text);
+        }
+
+        private void BtnBuscListadoCli(object sender, RoutedEventArgs e)
+        {
+            FiltroCli();
+
+            TCPrincipal.SelectedIndex = 1;
+
+            LimpiarControles();
+
+            fly.IsOpen = false;
+        }
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+        // Filtro al listado de cliente
+        public void FiltroCon()
+        {
+            Contrato con = new Contrato();
+            DGListadoContrato.ItemsSource = con.FilCon(TxNContrato.Text);
+        }
+
+        private void BtnBuscListadoCon(object sender, RoutedEventArgs e)
+        {
+            FiltroCon();
+
+            TCPrincipal.SelectedIndex = 3;
+
+            LimpiarControles();
+
+            fly.IsOpen = false;
+        }
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
 
         /*
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -751,9 +805,8 @@ namespace BelifeWPf
             if (DGlistadoClientes.SelectedItem == null) return;
             var selected = DGlistadoClientes.SelectedItem as Cliente;
             
-            
-
         }
+        
 
         private void CbCodigoPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -765,7 +818,12 @@ namespace BelifeWPf
 
         }
 
-       
+        private void Btnrefresliscon(object sender, MouseButtonEventArgs e)
+        {
+            CargarContratos();
+        }
+
+        
     }
     
 }

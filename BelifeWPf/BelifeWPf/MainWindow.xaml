@@ -88,7 +88,7 @@
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de Clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button x:Name="BtFiltroListadoCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar " Click="BtFiltroListadoCliente_Click"/>
+                    <Button x:Name="BtFiltroListadoCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar " Click="BtFiltroListadoCliente_Click" MouseDoubleClick="Btnrefresliscli"/>
 
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
@@ -134,8 +134,8 @@
                     <Button x:Name="BtActualizarContrato"  Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Actualizar " Click="BtActualizarContrato_Click"/>
                     <Button x:Name="BtCrearContrato"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Crear " Click="BtCrearContrato_Click"/>
                     <Button x:Name="BtBuscarContrato" Style="{DynamicResource BotonCurvo2}" Margin="492,131,468,390" Height="Auto" Width="Auto" Click="BtBuscarContrato_Click"/>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448" Content="Listado Contratos " Height="Auto" Width="Auto"/>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447" Content="Listado Clientes " Height="Auto" Width="Auto"/>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448"  Click="BtnBuscListadoCon"  Content="Listado Contratos " Height="Auto" Width="Auto"/>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447"   Click="BtnBuscListadoCli"  Content="Listado Clientes "  Height="Auto" Width="Auto"/>
                     <!--BOTON-->
 
                     <!--LABEL-->
@@ -226,7 +226,7 @@
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button x:Name="BtFiltroContrato"  Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   " Click="Filtrarcont"/>
+                    <Button x:Name="BtFiltroContrato"  Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   " Click="Filtrarcont" MouseDoubleClick="Btnrefresliscon"/>
                     <Button x:Name="BtRefrescar" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>
                 </Grid>
             </mah:MetroTabItem>
