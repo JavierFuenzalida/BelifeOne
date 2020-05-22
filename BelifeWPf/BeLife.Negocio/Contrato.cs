@@ -247,9 +247,9 @@ namespace BeLife.Negocio
             }
 
         }
+        
 
-
-        public IEnumerable<Contrato> ReadF(string numero)
+        public IEnumerable<Contrato> FilCon(string numero)
         {
 
             if (numero.Length > 0)
