@@ -190,3 +190,4 @@ C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\
 C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.exe
 C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.pdb
 C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionarioAltoContraste.baml
+C:\Users\danie\Desktop\proyectos\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionarioAltoContraste.baml

@@ -365,6 +365,13 @@ namespace BelifeWPf
             CargarCliente();
         }
 
+        //BOTON REFRESCAR CLIENTE
+        private void BtrefreshListadoCliente_Click(object sender, RoutedEventArgs e)
+        {
+            CargarCliente();
+            Limpiar();
+        }
+
         /*
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 
@@ -909,6 +916,8 @@ namespace BelifeWPf
                 AltoContraste = false;
             }
         }
+
+
     }
     
 }
