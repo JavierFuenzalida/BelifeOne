@@ -191,6 +191,16 @@
     </Style>
     <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (SOLO LUPA)-->
 
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (REFRESCAR)-->
+    <Style TargetType="Image" x:Key="ImagenBotonREFRESCAR">
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/ImagenesAltoContraste/Command-Refresh-Black.png"/>
+    </Style>
+    
+    
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (REFRESCAR)-->
     <!---->
     <!---->
     <!--IMAGENES-->
@@ -393,6 +403,7 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="CaretBrush" Value="Gray"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Black"/>
 
     </Style>
 
@@ -416,6 +427,7 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="CaretBrush" Value="Transparent"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <!--<Setter Property="Foreground" Value="Black"/>-->
 
     </Style>
     <!---BORDER PARA INCERTAR CONTROLES INPUT y CONTROL TEXTBOX (Listado de cliente y contrato)-->

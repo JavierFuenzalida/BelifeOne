@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenesaltocontraste/search-wf.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenesaltocontraste/command-refresh-black.png")]
 
 

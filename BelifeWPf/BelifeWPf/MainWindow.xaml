@@ -87,13 +87,13 @@
                         <TextBox x:Name="TxApellidos" Style="{DynamicResource Input2}"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,274,304,247">
-                        <ComboBox x:Name="CbSexo" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" SelectionChanged="Cbsexo_SelectionChanged"  />
+                        <ComboBox x:Name="CbSexo" Width="250" Background="Transparent" BorderThickness="0" Foreground="Black" BorderBrush="LightGray" SelectionChanged="Cbsexo_SelectionChanged"  />
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,344,304,177">
-                        <DatePicker x:Name="DpFechaNacimiento" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray" VerticalAlignment="Center"/>
+                        <DatePicker x:Name="DpFechaNacimiento" Width="250" Background="Transparent" BorderThickness="0" Foreground="Black" BorderBrush="LightGray" VerticalAlignment="Center"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="442,408,304,113">
-                        <ComboBox x:Name="CbEstadoCivil" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="LightGray"  SelectedIndex="-1" SelectionChanged="CbEstadoCivil_SelectionChanged"   />
+                        <ComboBox x:Name="CbEstadoCivil" Width="250" Background="Transparent" Foreground="Black" BorderThickness="0" BorderBrush="LightGray"  SelectedIndex="-1" SelectionChanged="CbEstadoCivil_SelectionChanged"   />
                     </Border>
 
 
@@ -145,6 +145,10 @@
                     <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
                         <TextBox x:Name="TxFiltrarRut" Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
+                    <!--<Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
+                    <Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtrefreshListadoCliente_Click">
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonREFRESCAR}" RenderTransformOrigin="-0.38,0.4"/>
+                    </Button>
                     <!--CONTROL DE FILTROS-->
 
 
@@ -227,17 +231,17 @@
                         <TextBox x:Name="TxRutCliente" Style="{DynamicResource Input2}" Margin="-1,1,3,-3"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="216,298,530,223">
-                        <ComboBox Name="CbCodigoPlan" Width="250" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="3,-1,-1,1" SelectionChanged="CbCodigoPlan_SelectionChanged_1"/>
+                        <ComboBox Name="CbCodigoPlan" Width="250" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="3,-1,-1,1" SelectionChanged="CbCodigoPlan_SelectionChanged_1"/>
                     </Border>
 
                     <Border Style="{DynamicResource Input1}" Margin="736,250,10,271">
-                        <DatePicker Name="DpFechaFInVig" Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False"/>
+                        <DatePicker Name="DpFechaFInVig" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="736,192,10,329">
-                        <DatePicker Name="DpFechaInicioVig" Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center"/>
+                        <DatePicker Name="DpFechaInicioVig" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="216,245,530,276">
-                        <DatePicker Name="DpFechaCreacion" Width="240" Height="40" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="6,0,6,-2"/>
+                        <DatePicker Name="DpFechaCreacion" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="6,0,6,-2"/>
                     </Border>
                     <Border Style="{DynamicResource Input1}" Margin="216,350,530,101" Height="Auto" Width="Auto">
                         <TextBox x:Name="TxObservaciones" Style="{DynamicResource Input2}" Height="Auto" Margin="1,9" MinLines="4" />
@@ -299,7 +303,7 @@
                     </Button>
                     <!--<Button x:Name="BtRefrescar" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
                     <Button x:Name="BtRefrescar" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtRefrescar_Click">
-                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonREFRESCAR}" RenderTransformOrigin="-0.38,0.4"/>
                     </Button>
                 </Grid>
             </mah:MetroTabItem>
