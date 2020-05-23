@@ -20,26 +20,52 @@
     </mah:MetroWindow.BorderBrush>
 
     <Grid>
-        <Border CornerRadius="30" Background="LightGray" MouseLeftButtonDown="Border_MouseLeftButtonDown"/>
+        <Border CornerRadius="30" Style="{DynamicResource BorderFondo}"/>
+
         <!--TAP CONTROL-->
-        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent" SelectionChanged="TCPrincipal_SelectionChanged" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
-            
+        <mah:MetroTabControl Name="TCPrincipal" Background="Transparent"  mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
+
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 1
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            
+
             <mah:MetroTabItem Name="TBI1" Header="" Margin="360,48,-361,-47">
                 <Grid>
-                    
+
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <Border Style="{DynamicResource BarraTitulos}">
-                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de clientes" Style="{DynamicResource text1}" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button x:Name="BtLimpiarCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar " Click="BtLimpiarCliente_Click"/>
-                    <Button x:Name="BtEliminarCliente"  Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Eliminar " Click="BtEliminarCliente_Click"/>
-                    <Button x:Name="BtActualizarCliente" Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Actualizar " Click="BtActualizarCliente_Click"/>
-                    <Button x:Name="BtRegistrarCliente"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Registrar " Click="BtRegistrarCliente_Click_1"/>
-                    <Button x:Name="BtBuscarCliente" Style="{DynamicResource BotonCurvo2}" Margin="719,83,105,425" Content="Buscar  " Height="Auto" Width="Auto" Click="BtBuscarCliente_Click"/>
+                    <Button x:Name="BtLimpiarCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Click="BtLimpiarCliente_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonLIMPIAR}" Height="40" />
+                            <TextBlock Text="      Limpiar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtEliminarCliente"  Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Click="BtEliminarCliente_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonELIMINAR}" Height="40" />
+                            <TextBlock Text="     Eliminar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtActualizarCliente" Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Click="BtActualizarCliente_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonACTUALIZAR}" Height="40" />
+                            <TextBlock Text="  Actualizar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtRegistrarCliente"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Click="BtRegistrarCliente_Click_1">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonAgregar}" Height="40" />
+                            <TextBlock Text="     Guardar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtBuscarCliente" Style="{DynamicResource BotonCurvo2}" Margin="719,83,105,425" Click="BtBuscarCliente_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Height="40" />
+                            <TextBlock Text="      Buscar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
 
                     <!--LABEL-->
                     <Label Style="{DynamicResource Label}" Content="Estado Civil:" Margin="309,408,471,113"></Label>
@@ -71,28 +97,35 @@
                     </Border>
 
 
+
+
                     <!--INPUT-->
 
                 </Grid>
             </mah:MetroTabItem>
-            
+
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 2
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            
+
             <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <!--<Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png"/>-->
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <Border Style="{DynamicResource BarraTitulos}">
-                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de Clientes" Foreground="LightGray" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de Clientes" Style="{DynamicResource text1}" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button x:Name="BtFiltroListadoCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar " Click="BtFiltroListadoCliente_Click" MouseDoubleClick="Btnrefresliscli"/>
+                    <Button x:Name="BtFiltroListadoCliente" Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Click="BtFiltroListadoCliente_Click" MouseDoubleClick="Btnrefresliscli">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCARNEGRO}" Height="40" />
+                            <TextBlock Text="       Filtrar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
 
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
-                        <DataGrid x:Name="DGlistadoClientes" IsReadOnly="True" Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" MouseDoubleClick="DGlistadoClientes_MouseDoubleClick" />
+                        <DataGrid x:Name="DGlistadoClientes" IsReadOnly="True" Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" MouseDoubleClick="DGlistadoClientes_MouseDoubleClick"/>
                     </Border>
 
                     <!--LABEL-->
@@ -117,32 +150,64 @@
 
                 </Grid>
             </mah:MetroTabItem>
-            
+
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 3
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            
+
             <mah:MetroTabItem Name="TBI3" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <Border Style="{DynamicResource BarraTitulos}">
-                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de Contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de Contratos" Style="{DynamicResource text1}" HorizontalAlignment="Center"/>
                     </Border>
                     <!--BOTON-->
-                    <Button x:Name="BtLimpiarContrato" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Content="Limpiar " Click="BtLimpiarContrato_Click"/>
-                    <Button x:Name="BtTerminarContrato" Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Content="Terminar " Click="BtTerminarContrato_Click"/>
-                    <Button x:Name="BtActualizarContrato"  Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Content="Actualizar " Click="BtActualizarContrato_Click"/>
-                    <Button x:Name="BtCrearContrato"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Content="Crear " Click="BtCrearContrato_Click"/>
-                    <Button x:Name="BtBuscarContrato" Style="{DynamicResource BotonCurvo2}" Margin="492,131,468,390" Height="Auto" Width="Auto" Click="BtBuscarContrato_Click"/>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448"  Click="BtnBuscListadoCon"  Content="Listado Contratos " Height="Auto" Width="Auto"/>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447"   Click="BtnBuscListadoCli"  Content="Listado Clientes "  Height="Auto" Width="Auto"/>
+                    <Button x:Name="BtLimpiarContrato" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Click="BtLimpiarContrato_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonLIMPIAR}" Height="40" />
+                            <TextBlock Text="      Limpiar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtTerminarContrato" Style="{DynamicResource BotonCurvo}" Margin="629,506,201,11" Click="BtTerminarContrato_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonELIMINAR}" Height="40" />
+                            <TextBlock Text="    Terminar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtActualizarContrato"  Style="{DynamicResource BotonCurvo}" Margin="442,507,388,10" Click="BtActualizarContrato_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonACTUALIZAR}" Height="40" />
+                            <TextBlock Text="  Actualizar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtCrearContrato"  Style="{DynamicResource BotonCurvo}" Margin="255,506,575,11" Click="BtCrearContrato_Click">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonAgregar}" Height="40" />
+                            <TextBlock Text="         Crear" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="BtBuscarContrato" Style="{DynamicResource boton360Contraste1}" Margin="495,133,466,390" Height="38" Width="39" Click="BtBuscarContrato_Click">
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                    </Button>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448"  Click="BtnBuscListadoCon" Height="Auto" Width="Auto">
+                        <StackPanel Orientation="Horizontal" Width="212" >
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Width="39"/>
+                            <TextBlock Text="  Listado Contratos" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="171" FontSize="20"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447"   Click="BtnBuscListadoCli" Height="Auto" Width="Auto">
+                        <StackPanel Orientation="Horizontal" Width="195" >
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}"/>
+                            <TextBlock Text="  Listado Clientes" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="154" FontSize="20"/>
+                        </StackPanel>
+                    </Button>
                     <!--BOTON-->
 
                     <!--LABEL-->
                     <Label Style="{DynamicResource Label}" Content="Nº Contrato:" Margin="83,134,697,387"></Label>
                     <Label Style="{DynamicResource Label}" Content="Rut Cliente:" Margin="93,190,687,331"></Label>
                     <Label Style="{DynamicResource Label}" Content="Tipo de Plan:" Margin="75,297,705,224"></Label>
-                   
+
                     <Label Style="{DynamicResource Label}" Content="Observaciones:" Margin="54,350,726,171" RenderTransformOrigin="0.491,-0.075"></Label>
                     <Label Style="{DynamicResource Label}" Content="Fecha Creaciòn:" Margin="50,247,730,274"></Label>
                     <Label Style="{DynamicResource Label}" Content="Inicio Vigencia:" Margin="581,192,199,329"></Label>
@@ -190,17 +255,17 @@
 
                 </Grid>
             </mah:MetroTabItem>
-            
+
             <!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                                         Tab item 4
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            
+
             <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}" HorizontalAlignment="Left" Margin="0" Width="1000"/>
 
                     <Border Background="#FF363636" CornerRadius="20" Margin="25,69,25,77" Grid.ColumnSpan="2">
-                        <DataGrid  Name="DGListadoContrato" IsReadOnly="True"   Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" >
+                        <DataGrid  Name="DGListadoContrato" IsReadOnly="True"   Margin="10" Style="{DynamicResource DataGrid1}" Background="LightGray" ColumnWidth="auto" >
 
                         </DataGrid>
                     </Border>
@@ -224,10 +289,18 @@
                     </Border>
                     <!--CONTROL DE FILTROS-->
                     <Border Style="{DynamicResource BarraTitulos}">
-                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Foreground="LightGray" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Listado de contratos" Style="{DynamicResource text1}" HorizontalAlignment="Center"/>
                     </Border>
-                    <Button x:Name="BtFiltroContrato"  Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Content="Filtrar   " Click="Filtrarcont" MouseDoubleClick="Btnrefresliscon"/>
-                    <Button x:Name="BtRefrescar" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>
+                    <Button x:Name="BtFiltroContrato"  Style="{DynamicResource BotonCurvo1}" Margin="820,510,10,7" Click="Filtrarcont" MouseDoubleClick="Btnrefresliscon">
+                        <StackPanel Orientation="Horizontal" Width="154">
+                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCARNEGRO}" Height="40" />
+                            <TextBlock Text="       Filtrar" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
+                        </StackPanel>
+                    </Button>
+                    <!--<Button x:Name="BtRefrescar" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
+                    <Button x:Name="BtRefrescar" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtRefrescar_Click">
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                    </Button>
                 </Grid>
             </mah:MetroTabItem>
 
@@ -237,20 +310,24 @@
         <!--TAP CONTROL-->
 
         <!--BOTON PARA DESPLEGAR FLYOUT-->
-        <Button Name="Btn_despliegaFly" Margin="0,72,984,72" Background="#FF363636" BorderBrush="#FF363636" mah:ButtonHelper.CornerRadius="0,20,20,0" Padding="1" BorderThickness="0,0,1,0" Foreground="#FF363636" Click="Btn_despliegaFly_Click"/>
+        <Button Name="Btn_despliegaFly" Margin="-2,72,986,72" BorderBrush="#FF363636" Padding="1" BorderThickness="0,0,1,0" Foreground="#FF363636" Style="{DynamicResource BotonLateral}" Click="Btn_despliegaFly_Click"/>
         <!--BOTON PARA DESPLEGAR FLYOUT-->
 
         <!--BOTON PARA CERRAR LA APP-->
         <Button Style="{DynamicResource boton360}" Name="Btn_CerrarApp" Margin="936,0,31,544" Click="Cerrar">
-            <Image Style="{DynamicResource Imagen360}" Source="Imagenes/Cross Close.png" />
+            <Image Style="{DynamicResource Imagen360-Cerrar}"/>
         </Button>
         <!--BOTON PARA CERRAR LA APP-->
 
         <!--BOTON PARA MINIMIZAR LA APP-->
         <Button Style="{DynamicResource boton360}" Name="Btn_MinApp" Height="24" Margin="915,16,60,560" Click="Minimizar" >
-            <Image Style="{DynamicResource Imagen360}" Source="Imagenes/CircledArrow Topleft -02.png"  />
+            <Image Style="{DynamicResource Imagen360-Mini}"  />
         </Button>
         <!--BOTON PARA MINIMIZAR LA APP-->
+
+        <Button Style="{DynamicResource boton360Contraste}" Margin="30,555,936,11" Click="Button_Click" Height="34" Width="34">
+            <Image Style="{DynamicResource Imagen360-Contraste}"/>
+        </Button>
 
         <mah:Flyout x:Name="fly" Background="Black" Opacity="0.7" Margin="0,72" Foreground="#FFD6D6D6" Width="108">
             <Canvas Height="384">
@@ -281,7 +358,7 @@
                 </Button>
             </Canvas>
         </mah:Flyout>
-        <Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png" Margin="22,10,778,539"/>
+        <Image  Style="{DynamicResource LogoBeLife}" Margin="22,10,778,539"/>
 
 
 
