@@ -141,3 +141,65 @@ C:\Users\HP\Desktop\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CoreCompileIn
 C:\Users\HP\Desktop\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CopyComplete
 C:\Users\HP\Desktop\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.exe
 C:\Users\HP\Desktop\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll.config
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.pdb
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll.config
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\Icons.baml
+C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.exe.config
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.exe
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BelifeWPf.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\ControlzEx.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll.config
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll.config
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\ControlzEx.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.xml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\MahApps.Metro.xml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\Icons.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\MainWindow.g.cs
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\App.g.cs
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf_MarkupCompile.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf_MarkupCompile.lref
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\App.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionario.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\MainWindow.baml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.g.resources
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.Properties.Resources.resources
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.GenerateResource.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.csproj.CopyComplete
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.exe
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\BelifeWPf.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionarioAltoContraste.baml
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.dll
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.pdb
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Datos.dll.config
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.pdb
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\BeLife.Negocio.dll.config
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.xml
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\Icons.baml
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BelifeWPf\obj\Debug\DiccionarioRecursos\BotonDiccionarioAltoContraste.baml

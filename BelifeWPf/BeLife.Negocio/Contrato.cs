@@ -70,9 +70,21 @@ namespace BeLife.Negocio
             Datos.BeLifeEntities bbdd = new Datos.BeLifeEntities();
             try
             {
-                Datos.Contrato contrato = bbdd.Contrato.First(e => e.RutCliente == RutCliente);
+
+                if (!RutCliente.Equals(""))
+                {
+                    Datos.Contrato contrato = bbdd.Contrato.First(e => e.RutCliente == RutCliente);
+                    CommonBC.Syncronize(contrato, this);
+                }
+                else
+                {
+                    Datos.Contrato contrato = bbdd.Contrato.First(e => e.Numero == Numero);
+                    CommonBC.Syncronize(contrato, this);
+                }
+
                 
-                CommonBC.Syncronize(contrato, this);
+                
+                
 
                 return true;
             }
@@ -234,6 +246,23 @@ namespace BeLife.Negocio
                 return ReadAll();
             }
 
+        }
+        
+
+        public IEnumerable<Contrato> FilCon(string numero)
+        {
+
+            if (numero.Length > 0)
+            {
+                IEnumerable<Contrato> a = from d in ReadAll()
+                                          where d.Numero == numero.ToString()
+                                          select d;
+                return a;
+            }
+            else
+            {
+                return ReadAll();
+            }
         }
 
     }

@@ -25,7 +25,9 @@ namespace BelifeWPf
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        
+
+        bool AltoContraste = false;
+
 
         public MainWindow()
         {
@@ -40,7 +42,7 @@ namespace BelifeWPf
             CargarSexoF();
 
             //registro contrato
-
+            CargarContrato();
 
             //Listado de contratos
             CargarContratos();
@@ -80,6 +82,9 @@ namespace BelifeWPf
         private void BtBusCliente_click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 1;
+
+            CargarCliente();
+
             fly.IsOpen = false;
         }
 
@@ -92,6 +97,9 @@ namespace BelifeWPf
         private void BtbusContrato_Click(object sender, RoutedEventArgs e)
         {
             TCPrincipal.SelectedIndex = 3;
+
+            CargarContratos();
+
             fly.IsOpen = false;
         }
 
@@ -100,10 +108,7 @@ namespace BelifeWPf
             this.DragMove();
         }
 
-        private void TCPrincipal_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
 
         private void Cbsexo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -128,7 +133,8 @@ namespace BelifeWPf
             DpFechaNacimiento.SelectedDate = DateTime.Today;
             CbSexo.SelectedIndex = 0;
             CbEstadoCivil.SelectedIndex = 0;
-            
+            LbNombreCliente.Content = "";
+
             CargarSexo();
             CargarEstado();
             //CargarCliente();
@@ -196,7 +202,7 @@ namespace BelifeWPf
             }
             else
             {
-                await this.ShowMessageAsync("Error", "No se registro el Cliente");
+                await this.ShowMessageAsync("Intentalo Nuevamnete", "Cliente No Pudo Ser Registrado");
             }
         }
 
@@ -251,7 +257,7 @@ namespace BelifeWPf
             }
             else
             {
-                await this.ShowMessageAsync("Intentalo Nuevamente", "Cliente no pudo ser Actualizado");
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Cliente No Pudo Ser Actualizado");
             }
         }
 
@@ -354,6 +360,10 @@ namespace BelifeWPf
         {
             filtro();
         }
+        private void Btnrefresliscli(object sender, MouseButtonEventArgs e)
+        {
+            CargarCliente();
+        }
 
         /*
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -378,6 +388,355 @@ namespace BelifeWPf
 
         }
 
+        //BOTON CREAR CONTRATO
+        private async void BtCrearContrato_Click(object sender, RoutedEventArgs e)
+        {
+            //boton crear contrato en UI
+            Contrato contrato = new Contrato();
+
+            Tarificador pr = new Tarificador();
+
+            Double Prianual = pr.Prima_anual(TxRutCliente.Text);
+
+            if (CbCodigoPlan.SelectedIndex == 0)
+            {
+                Prianual = Prianual + 0.5;
+            }
+            else if (CbCodigoPlan.SelectedIndex == 1)
+            {
+                Prianual = Prianual + 3.5;
+            }
+            else if (CbCodigoPlan.SelectedIndex == 2)
+            {
+                Prianual = Prianual + 1.2;
+            }
+            else if (CbCodigoPlan.SelectedIndex == 3)
+            {
+                Prianual = Prianual + 2;
+            }
+            else if (CbCodigoPlan.SelectedIndex == 4)
+            {
+                Prianual = Prianual + 3.5;
+            }
+
+
+            Double Primensual = pr.Prima_anual(TxRutCliente.Text) / 12;
+
+
+
+            contrato.RutCliente = TxRutCliente.Text;
+            
+            contrato.FechaCreacion = DateTime.Today;
+            contrato.FechaInicioVigencia = (DateTime)DpFechaInicioVig.SelectedDate;
+            //el fin de la vigencia se calcula cin el inicio mas 1 año
+            contrato.FechaFinVigencia = ((DateTime)DpFechaInicioVig.SelectedDate).AddYears(1);
+            //registro automatico de la prima mensual
+            contrato.PrimaMensual = Primensual;
+            //registro automatico de la prima anual 
+            contrato.PrimaAnual = Prianual;
+            contrato.CodigoPlan = CbCodigoPlan.SelectedValue.ToString();
+            contrato.Observaciones = TxObservaciones.Text;
+
+            if (ChBDeclaracionSalud.IsChecked == true)
+            {
+                contrato.Vigente = true;
+            }
+
+            else
+            {
+                contrato.Vigente = false;
+            }
+
+            if (ChBDeclaracionSalud.IsChecked == true)
+            {
+                contrato.DeclaracionSalud = true;
+            }
+            else
+            {
+                contrato.DeclaracionSalud = false;
+            }
+
+            contrato.Numero = Convert.ToDateTime((DateTime.Now)).ToString("yyyyMMddhhmmss");
+
+            if (contrato.CreateContrato())
+            {
+                await this.ShowMessageAsync("Exito", "Contrato Registrado");
+                LimpiarControles();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Contrato No Pudo Ser Registrado");
+                
+            }
+        }
+
+
+        //BOTON ACTUALIZAR 
+        private async void BtActualizarContrato_Click(object sender, RoutedEventArgs e)
+        {
+               
+             
+            Contrato contrato = new Contrato();
+            contrato.Numero = TxNContrato.Text.ToString();
+            contrato.RutCliente = TxRutCliente.Text;
+            contrato.FechaCreacion = (DateTime)DpFechaCreacion.SelectedDate;
+            contrato.FechaInicioVigencia = (DateTime)DpFechaInicioVig.SelectedDate;
+            contrato.FechaFinVigencia = (DateTime)DpFechaFInVig.SelectedDate;
+            contrato.PrimaMensual = Convert.ToDouble(TxPrimaMensual.Text);
+            contrato.PrimaAnual = Convert.ToDouble(TxPrimaAnual.Text);
+            contrato.CodigoPlan = CbCodigoPlan.SelectedValue.ToString();
+            contrato.Observaciones = TxObservaciones.Text;
+            ChBVigencia.IsEnabled = true;
+
+            if (ChBVigencia.IsChecked == true)
+            {
+                contrato.Vigente = true;
+            }
+            else
+            {
+                contrato.Vigente = false;
+            }
+
+            if (ChBDeclaracionSalud.IsChecked == true)
+            {
+                contrato.DeclaracionSalud = true;
+            }
+            else
+            {
+                contrato.DeclaracionSalud = false;
+            }
+
+
+
+            if (contrato.UpdateContrato())
+            {
+                await this.ShowMessageAsync("Exito", "Contrato Actualizado");
+                LimpiarControles();
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Contrato No Pudo Ser Actualizado");
+
+            }
+        }
+
+
+        //BOTON BUSCAR 
+        private async void BtBuscarContrato_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            Contrato con = new Contrato();
+
+
+            if (!TxRutCliente.Text.Equals(""))
+            {
+                con.RutCliente = TxRutCliente.Text;
+            }
+            else
+            {
+                con.Numero = TxNContrato.Text;
+            }
+
+            //Para buscar el nombre del cliente y ponerlo en contrato
+            if (con.ReadContrato())
+            {
+                Cliente cli = new Cliente();
+
+
+                if (!TxRutCliente.Text.Equals(""))
+                {
+                    cli.RutCliente = TxRutCliente.Text;
+                }
+                else
+                {
+                    cli.RutCliente = con.RutCliente;
+                }
+
+
+                if (cli.Read())
+                {
+                    LbNombreCliente.Content = "Cliente:" + " " + cli.Nombres + " " + cli.Apellidos;
+                }
+
+
+                TxNContrato.Text = con.Numero;
+                DpFechaCreacion.SelectedDate = con.FechaCreacion;
+                DpFechaInicioVig.SelectedDate = con.FechaInicioVigencia;
+                DpFechaFInVig.SelectedDate = con.FechaFinVigencia;
+                TxPrimaMensual.Text = con.PrimaMensual.ToString();
+                TxPrimaAnual.Text = con.PrimaAnual.ToString();
+                CbCodigoPlan.SelectedValue = con.CodigoPlan;
+                TxObservaciones.Text = con.Observaciones;
+                TxRutCliente.Text = con.RutCliente;
+
+                //Checkbox de vigencia
+                if (con.Vigente == true)
+                {
+                    ChBVigencia.IsChecked = true;
+                }
+                else
+                {
+                    ChBVigencia.IsChecked = false;
+                }
+
+                //Checkbox de decaracion salud
+                if (con.DeclaracionSalud == true)
+                {
+                    ChBDeclaracionSalud.IsChecked = true;
+                }
+                else
+                {
+                    ChBDeclaracionSalud.IsChecked = false;
+                }
+
+                //bloquear los datos
+                TxRutCliente.IsEnabled = false;
+                DpFechaCreacion.IsEnabled = false;
+                DpFechaFInVig.IsEnabled = false;
+                TxPrimaAnual.IsEnabled = false;
+                TxPrimaMensual.IsEnabled = false;
+                TxNContrato.IsEnabled = false;
+
+                ChBDeclaracionSalud.IsEnabled = false;
+                CbCodigoPlan.IsEnabled = false;
+                DpFechaInicioVig.IsEnabled = false;
+
+                await this.ShowMessageAsync("Exito", "Contrato Leído");
+
+            }
+            else
+            {
+                await this.ShowMessageAsync("Intentalo Nuevamente", "Contrato No Pudo Ser Leído");
+
+            }
+        }
+
+
+        //BOTON TERMINAR
+        private async void BtTerminarContrato_Click(object sender, RoutedEventArgs e)
+        {
+            Contrato contrato = new Contrato();
+            contrato.Numero = TxNContrato.Text;
+            contrato.RutCliente = TxRutCliente.Text;
+            contrato.FechaCreacion = (DateTime)DpFechaCreacion.SelectedDate;
+            contrato.FechaInicioVigencia = (DateTime)DpFechaInicioVig.SelectedDate;
+            contrato.FechaFinVigencia = (DateTime)DpFechaFInVig.SelectedDate;
+            contrato.PrimaMensual = Convert.ToDouble(TxPrimaMensual.Text);
+            contrato.PrimaAnual = Convert.ToDouble(TxPrimaAnual.Text);
+            contrato.CodigoPlan = CbCodigoPlan.SelectedValue.ToString();
+            contrato.Observaciones = TxObservaciones.Text;
+            ChBVigencia.IsEnabled = false;
+
+            if (ChBVigencia.IsChecked == true)
+            {
+                contrato.Vigente = false;
+            }
+            else
+            {
+                contrato.Vigente = false;
+            }
+            if (ChBDeclaracionSalud.IsChecked == true)
+            {
+                contrato.DeclaracionSalud = true;
+            }
+            else
+            {
+                contrato.DeclaracionSalud = false;
+            }
+
+            if (contrato.DeleteContrato())
+            {
+                await this.ShowMessageAsync("Información", "Contrato Terminado");
+                LimpiarControles();
+                ChBVigencia.IsEnabled = true;
+            }
+            else
+            {
+
+                await this.ShowMessageAsync("Intentelo Nuevamente", "Contrato No Pudo Ser Terminado");
+            }
+        }
+
+
+
+
+        private void BtLimpiarContrato_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        private void LimpiarControles()
+        {
+            //limpiar controles de UI
+            TxRutCliente.Text = string.Empty;
+            DpFechaCreacion.SelectedDate = DateTime.Today;
+            DpFechaInicioVig.SelectedDate = DateTime.Today;
+            DpFechaFInVig.SelectedDate = DateTime.Today;
+            ChBVigencia.IsChecked = false;
+            ChBDeclaracionSalud.IsChecked = false;
+            TxPrimaAnual.Text = string.Empty;
+            TxPrimaMensual.Text = string.Empty;
+            TxObservaciones.Text = string.Empty;
+            CbCodigoPlan.SelectedIndex = 0;
+            TxNContrato.Text = string.Empty;
+            LbNombreCliente.Content = "";
+
+            CargarContrato();
+
+            //bloquear los datos
+            TxRutCliente.IsEnabled = true;
+            DpFechaCreacion.IsEnabled = true;
+            DpFechaFInVig.IsEnabled = true;
+            DpFechaInicioVig.IsEnabled = false;
+            TxPrimaAnual.IsEnabled = false;
+            TxPrimaMensual.IsEnabled = false;
+            ChBDeclaracionSalud.IsEnabled = true;
+            CbCodigoPlan.IsEnabled = true;
+            TxNContrato.IsEnabled = true;
+        }
+
+        // Filtro al listado de contrato
+        public void FiltroCli()
+        {
+            Cliente cli = new Cliente();
+            DGlistadoClientes.ItemsSource = cli.FilCli(TxRutCliente.Text);
+        }
+
+        private void BtnBuscListadoCli(object sender, RoutedEventArgs e)
+        {
+            FiltroCli();
+
+            TCPrincipal.SelectedIndex = 1;
+
+            LimpiarControles();
+
+            fly.IsOpen = false;
+        }
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+        // Filtro al listado de cliente
+        public void FiltroCon()
+        {
+            Contrato con = new Contrato();
+            DGListadoContrato.ItemsSource = con.FilCon(TxNContrato.Text);
+        }
+
+        private void BtnBuscListadoCon(object sender, RoutedEventArgs e)
+        {
+            FiltroCon();
+
+            TCPrincipal.SelectedIndex = 3;
+
+            LimpiarControles();
+
+            fly.IsOpen = false;
+        }
+        //||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
 
         /*
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -386,6 +745,8 @@ namespace BelifeWPf
 
         0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
         */
+
+
 
         private void CargarContratos()
         {
@@ -417,5 +778,137 @@ namespace BelifeWPf
         {
             BFiltro();
         }
+
+        private void BtRefrescar_Click(object sender, RoutedEventArgs e)
+        {
+            CargarContratos();
+            LimpiarDG();
+        }
+
+
+        private void LimpiarDG()
+        {
+
+            TxRutFiltroContrato.Text = string.Empty;
+            TxNumFiltroContrato.Text = string.Empty;
+            CBFiltroNumPoliza.SelectedIndex = 0;
+            
+
+        }
+
+
+        //terminar la seleccion de datos de la lista
+        private void DGlistadoClientes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Limpiar();
+            if (DGlistadoClientes.SelectedItem == null) return;
+            var selected = DGlistadoClientes.SelectedItem as Cliente;
+            
+        }
+        
+
+        private void CbCodigoPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void CbCodigoPlan_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Btnrefresliscon(object sender, MouseButtonEventArgs e)
+        {
+            CargarContratos();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //prueba alto contraste 
+            
+            if (AltoContraste == false)
+            {
+                Application.Current.Resources.MergedDictionaries.Clear();
+
+                
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+
+
+                //Llamada a tema altocontraste
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("DiccionarioRecursos/BotonDiccionarioAltoContraste.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+                AltoContraste = true;
+
+            }
+            else if (AltoContraste == true)
+            {
+
+                Application.Current.Resources.MergedDictionaries.Clear();
+
+
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Baselight.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+
+
+                //Llamada a tema altocontraste
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("DiccionarioRecursos/BotonDiccionario.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+                AltoContraste = false;
+            }
+        }
     }
+    
 }

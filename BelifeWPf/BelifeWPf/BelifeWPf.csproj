@@ -81,6 +81,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DiccionarioRecursos\BotonDiccionarioAltoContraste.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -164,6 +168,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagenesAltoContraste\BeLife-logo-00ff01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagenesAltoContraste\CircledArrow contraste.png" />
+    <Resource Include="ImagenesAltoContraste\Cross CloseContraste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Display-Contrast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagenesAltoContraste\Display-Contrast-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Search-WFwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagenesAltoContraste\Search-WF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

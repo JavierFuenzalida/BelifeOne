@@ -255,7 +255,7 @@ namespace BeLife.Negocio
             }
 
         }
-        public IEnumerable<Cliente> ReadC(string rut)
+        public IEnumerable<Cliente> FilCli(string rut)
         {
 
             if (rut.Length > 0)
