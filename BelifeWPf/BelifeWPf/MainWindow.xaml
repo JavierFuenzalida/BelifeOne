@@ -147,7 +147,7 @@
                     </Border>
                     <!--<Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
                     <Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtrefreshListadoCliente_Click">
-                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonREFRESCAR}" RenderTransformOrigin="-0.38,0.4"/>
                     </Button>
                     <!--CONTROL DE FILTROS-->
 
@@ -303,7 +303,7 @@
                     </Button>
                     <!--<Button x:Name="BtRefrescar" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
                     <Button x:Name="BtRefrescar" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtRefrescar_Click">
-                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonREFRESCAR}" RenderTransformOrigin="-0.38,0.4"/>
                     </Button>
                 </Grid>
             </mah:MetroTabItem>
