@@ -845,7 +845,7 @@ namespace BelifeWPf
                 });
                 Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
                 {
-                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml", UriKind.RelativeOrAbsolute)
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml", UriKind.RelativeOrAbsolute)
                 });
                 Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
                 {

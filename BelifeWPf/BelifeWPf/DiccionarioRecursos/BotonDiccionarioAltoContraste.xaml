@@ -393,6 +393,7 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="CaretBrush" Value="Gray"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="Black"/>
 
     </Style>
 
@@ -416,6 +417,7 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="CaretBrush" Value="Transparent"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <!--<Setter Property="Foreground" Value="Black"/>-->
 
     </Style>
     <!---BORDER PARA INCERTAR CONTROLES INPUT y CONTROL TEXTBOX (Listado de cliente y contrato)-->
