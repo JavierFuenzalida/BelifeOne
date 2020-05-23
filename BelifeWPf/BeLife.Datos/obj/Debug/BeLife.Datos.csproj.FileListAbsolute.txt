@@ -21,3 +21,15 @@ C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLif
 C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.csproj.CopyComplete
 C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.dll
 C:\Users\HP\Documents\aaaaaaaaaaa3ersem\DESARROLLO EAs\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\BeLife.Datos.dll.config
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\BeLife.Datos.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\BeLife.Datos.pdb
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\EntityFramework.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\EntityFramework.xml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.csprojAssemblyReference.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.csproj.CoreCompileInputs.cache
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.csproj.CopyComplete
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.dll
+C:\Users\javie\Desktop\DUOC\Respaldo, pruebas\BelifeOne\BelifeWPf\BeLife.Datos\obj\Debug\BeLife.Datos.pdb

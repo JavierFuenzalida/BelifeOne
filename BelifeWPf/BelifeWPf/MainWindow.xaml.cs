@@ -26,6 +26,8 @@ namespace BelifeWPf
     public partial class MainWindow : MetroWindow
     {
 
+        bool AltoContraste = false;
+
 
         public MainWindow()
         {
@@ -106,10 +108,7 @@ namespace BelifeWPf
             this.DragMove();
         }
 
-        private void TCPrincipal_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
 
         private void Cbsexo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -823,7 +822,93 @@ namespace BelifeWPf
             CargarContratos();
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //prueba alto contraste 
+            
+            if (AltoContraste == false)
+            {
+                Application.Current.Resources.MergedDictionaries.Clear();
+
+                
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+
+
+                //Llamada a tema altocontraste
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("DiccionarioRecursos/BotonDiccionarioAltoContraste.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+                AltoContraste = true;
+
+            }
+            else if (AltoContraste == true)
+            {
+
+                Application.Current.Resources.MergedDictionaries.Clear();
+
+
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Accents/Baselight.xaml", UriKind.RelativeOrAbsolute)
+                });
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+
+
+                //Llamada a tema altocontraste
+                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary()
+                {
+                    Source = new Uri("DiccionarioRecursos/BotonDiccionario.xaml", UriKind.RelativeOrAbsolute)
+                });
+
+                AltoContraste = false;
+            }
+        }
     }
     
 }
