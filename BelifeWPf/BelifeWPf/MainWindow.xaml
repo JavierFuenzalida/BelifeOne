@@ -145,6 +145,10 @@
                     <Border Style="{DynamicResource Input3}" Margin="89,510,691,7">
                         <TextBox x:Name="TxFiltrarRut" Style="{DynamicResource Input4}" mah:TextBoxHelper.Watermark="Rut Cliente" mah:TextBoxHelper.WatermarkAlignment="Center"/>
                     </Border>
+                    <!--<Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource BotonCurvo2}" Margin="634,24,326,497" Height="Auto" Width="Auto" Click="BtRefrescar_Click"/>-->
+                    <Button x:Name="BtrefreshListadoCliente" Style="{DynamicResource boton360Contraste1}" Margin="634,24,326,497" Height="38" Width="39" Click="BtrefreshListadoCliente_Click">
+                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                    </Button>
                     <!--CONTROL DE FILTROS-->
 
 
