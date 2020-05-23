@@ -2,11 +2,22 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:BelifeWPf.DiccionarioRecursos">
 
+    <!--Border de fondo-->
+    <Style TargetType="Border" x:Key="BorderFondo">
+        <Setter Property="Background" Value="LightGray"/>
+
+    </Style>
+    <!--Border de fondo-->
+    
+    
+    
+    
     <!--IMAGEN TAMAÑO Y POSICION DE LOGO-->
     <Style TargetType="Image" x:Key="LogoBeLife">
-        <Setter Property="Height" Value="51"/>
-        <Setter Property="Width" Value="200"/>
+        <!--<Setter Property="Height" Value="51"/>
+        <Setter Property="Width" Value="200"/>-->
         <Setter Property="Margin" Value="10,-33,760,512"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/BeLife-logo.png"/>
     </Style>
     <!--IMAGEN TAMAÑO Y POSICION DE LOGO-->
 
@@ -24,15 +35,209 @@
     </Style>
     <!--BOTON CIRCULAR 360-->
 
-    <!--IMAGEN CIRCULAR 360-->
-    <Style TargetType="Image" x:Key="Imagen360">
+    <!--BOTON CIRCULAR 360 Contraste-->
+    <Style TargetType="Button" x:Key="boton360Contraste">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid">
+                        <Border x:Name="border" BorderBrush="#707070" BorderThickness="1" Background="Transparent">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                      TextElement.FontWeight="Normal">
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <!--BOTON CIRCULAR 360 Contraste-->
+
+    <!--BOTON CIRCULAR 360 Contraste 1-->
+    <Style TargetType="Button" x:Key="boton360Contraste1">
+        <!--<Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>-->
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid">
+                        <Border x:Name="border" CornerRadius="20" BorderBrush="#707070" BorderThickness="1" Background="#FF363636">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                      TextElement.FontWeight="Normal">
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <!--BOTON CIRCULAR 360 Contraste 1-->
+
+
+    <!--IMAGENES-->
+    <!---->
+    <!---->
+
+    <!--IMAGEN CIRCULAR 360 CERRAR-->
+    <Style TargetType="Image" x:Key="Imagen360-Cerrar">
         <Setter Property="Height" Value="22"/>
         <Setter Property="Width" Value="22"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Cross Close.png"/>
     </Style>
-    <!--IMAGEN CIRCULAR 360-->
+    <!--IMAGEN CIRCULAR 360 CERRAR-->
 
+    <!--IMAGEN CIRCULAR 360 MINIMIZAR-->
+    <Style TargetType="Image" x:Key="Imagen360-Mini">
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/CircledArrow Topleft -02.png"/>
+    </Style>
+    <!--IMAGEN CIRCULAR 360 MINIMIZAR-->
+
+    <!--IMAGEN CIRCULAR 360 CONTRASTE-->
+    <Style TargetType="Image" x:Key="Imagen360-Contraste">
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="32"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Display-Contrast.png"/>
+    </Style>
+    <!--IMAGEN CIRCULAR 360 CONTRASTE-->
+
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON AGREGAR-->
+    <Style TargetType="Image" x:Key="ImagenBotonAgregar">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Add-New.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON AGREGAR-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON ACTUALIZAR-->
+    <Style TargetType="Image" x:Key="ImagenBotonACTUALIZAR">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Data-Edit.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON ACTUALIZAR-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON ELIMINAR-->
+    <Style TargetType="Image" x:Key="ImagenBotonELIMINAR">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Garbage-Closed.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON ELIMINAR-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON LIMPIAR-->
+    <Style TargetType="Image" x:Key="ImagenBotonLIMPIAR">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Clean-WF.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON LIMPIAR-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR-->
+    <Style TargetType="Image" x:Key="ImagenBotonBUSCAR">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Search-WFwhite.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (NEGRO)-->
+    <Style TargetType="Image" x:Key="ImagenBotonBUSCARNEGRO">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/ImagenesAltoContraste/Search-WF.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (NEGRO)-->
+
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (LUPA BLANCA 25X25)-->
+    <Style TargetType="Image" x:Key="ImagenBotonBUSCAR1">
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Source" Value="/BelifeWPf;component/Imagenes/Search-WFwhite.png"/>
+    </Style>
+    <!--TAMAÑO DE IMAGEN PARA BOTON BUSCAR (SOLO LUPA)-->
+
+
+
+    <!---->
+    <!---->
+    <!--IMAGENES-->
+
+
+    <!--BOTON lATERAL-->
+    <Style TargetType="Button" x:Key="BotonLateral">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid">
+                        <Border x:Name="border" CornerRadius="0,20,20,0" BorderBrush="#707070" BorderThickness="1" Background="#FF363636">
+                            <ContentPresenter HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                      TextElement.FontWeight="Normal">
+                            </ContentPresenter>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="#BEE6FD"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#3C7FB1"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#2C628B"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+
+    </Style>
+    <!--BOTON lATERAL-->
+    
+    
+    
+    
+    
     <!--BOTON REDONDIADO EN LAS 4 ESQUINAS-->
     <Style TargetType="Button" x:Key="BotonCurvo">
         <Setter Property="Height" Value="44"/>
@@ -141,13 +346,7 @@
     </Style>
     <!--BOTON REDONDIADO EN LAS 4 ESQUINAS (Buscar)-->
 
-    <!--TAMAÑO DE IMAGEN PARA BOTONES-->
-    <Style TargetType="Image" x:Key="ImagenBotones">
-        <Setter Property="Height" Value="41"/>
-        <Setter Property="Width" Value="41"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        
-    </Style>
+
     <!--IMAGEN CIRCULAR 360-->
 
 
@@ -293,6 +492,13 @@
         </Style.Triggers>
     </Style>
     <!--DATAGRID-->
+
+    <!--TEXTBLOCK TITULO-->
+    <Style TargetType="TextBlock" x:Key="text1">
+        <Setter Property="Foreground" Value="LightGray"/>
+
+    </Style>
+    <!--TEXTBLOCK TITULO-->
 
 
 

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenes/submit-01-wf.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imagenesaltocontraste/search-wf.png")]
 
 
