@@ -26,9 +26,18 @@ namespace BeLife.Datos
         }
     
         public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Comuna> Comuna { get; set; }
         public virtual DbSet<Contrato> Contrato { get; set; }
         public virtual DbSet<EstadoCivil> EstadoCivil { get; set; }
+        public virtual DbSet<MarcaModeloVehiculo> MarcaModeloVehiculo { get; set; }
+        public virtual DbSet<MarcaVehiculo> MarcaVehiculo { get; set; }
+        public virtual DbSet<ModeloVehiculo> ModeloVehiculo { get; set; }
         public virtual DbSet<Plan> Plan { get; set; }
+        public virtual DbSet<Region> Region { get; set; }
+        public virtual DbSet<RegionComuna> RegionComuna { get; set; }
         public virtual DbSet<Sexo> Sexo { get; set; }
+        public virtual DbSet<TipoContrato> TipoContrato { get; set; }
+        public virtual DbSet<Vehiculo> Vehiculo { get; set; }
+        public virtual DbSet<Vivienda> Vivienda { get; set; }
     }
 }

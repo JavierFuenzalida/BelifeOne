@@ -154,10 +154,6 @@
     <Resource Include="Imagenes\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BeLife.Datos\BeLife.Datos.csproj">
-      <Project>{18b5112d-bd17-451f-8a0b-fe3bc65c8ff1}</Project>
-      <Name>BeLife.Datos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BeLife.Negocio\BeLife.Negocio.csproj">
       <Project>{f5ee0442-3da5-4374-912e-1721c28d4269}</Project>
       <Name>BeLife.Negocio</Name>

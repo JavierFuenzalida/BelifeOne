@@ -12,22 +12,21 @@ namespace BeLife.Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Plan
+    public partial class Vehiculo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Plan()
+        public Vehiculo()
         {
             this.Contrato = new HashSet<Contrato>();
         }
     
-        public string IdPlan { get; set; }
-        public int IdTipoContrato { get; set; }
-        public string Nombre { get; set; }
-        public double PrimaBase { get; set; }
-        public string PolizaActual { get; set; }
+        public string Patente { get; set; }
+        public int IdMarca { get; set; }
+        public int IdModelo { get; set; }
+        public int Anho { get; set; }
     
+        public virtual MarcaModeloVehiculo MarcaModeloVehiculo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Contrato> Contrato { get; set; }
-        public virtual TipoContrato TipoContrato { get; set; }
     }
 }
