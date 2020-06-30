@@ -14,10 +14,19 @@ namespace BeLife.Datos
     
     public partial class Contrato
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Contrato()
+        {
+            this.Vivienda = new HashSet<Vivienda>();
+            this.Vehiculo = new HashSet<Vehiculo>();
+        }
+    
         public string Numero { get; set; }
         public System.DateTime FechaCreacion { get; set; }
+        public System.DateTime FechaTermino { get; set; }
         public string RutCliente { get; set; }
         public string CodigoPlan { get; set; }
+        public int IdTipoContrato { get; set; }
         public System.DateTime FechaInicioVigencia { get; set; }
         public System.DateTime FechaFinVigencia { get; set; }
         public bool Vigente { get; set; }
@@ -28,5 +37,9 @@ namespace BeLife.Datos
     
         public virtual Cliente Cliente { get; set; }
         public virtual Plan Plan { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vivienda> Vivienda { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Vehiculo> Vehiculo { get; set; }
     }
 }
