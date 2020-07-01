@@ -388,7 +388,7 @@ namespace BelifeWPf
             CbCodigoPlan.ItemsSource = plan.ReadAllPlan();
 
             /* Configura los datos en el ComboBOx */
-            CbCodigoPlan.DisplayMemberPath = "IdPlan"; //Propiedad para mostrar
+            CbCodigoPlan.DisplayMemberPath = "Nombre"; //Propiedad para mostrar
             CbCodigoPlan.SelectedValuePath = "IdPlan"; //Propiedad con el valor a rescatar
 
             CbCodigoPlan.SelectedIndex = 0; //Posiciona en el primer registro
@@ -814,15 +814,7 @@ namespace BelifeWPf
         }
         
 
-        private void CbCodigoPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
-
-        private void CbCodigoPlan_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void Btnrefresliscon(object sender, MouseButtonEventArgs e)
         {
@@ -916,7 +908,6 @@ namespace BelifeWPf
                 AltoContraste = false;
             }
         }
-
 
     }
     

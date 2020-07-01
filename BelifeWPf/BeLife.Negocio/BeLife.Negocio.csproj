@@ -61,14 +61,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BeLife.Datos\BeLife.Datos.csproj">
-      <Project>{18b5112d-bd17-451f-8a0b-fe3bc65c8ff1}</Project>
-      <Name>BeLife.Datos</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeLife.Datos\BeLife.Datos.csproj">
+      <Project>{a318fc50-9ce0-445f-b9a1-08fda9b27ee8}</Project>
+      <Name>BeLife.Datos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

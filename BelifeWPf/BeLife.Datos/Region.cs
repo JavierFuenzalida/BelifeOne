@@ -12,22 +12,18 @@ namespace BeLife.Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Plan
+    public partial class Region
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Plan()
+        public Region()
         {
-            this.Contrato = new HashSet<Contrato>();
+            this.RegionComuna = new HashSet<RegionComuna>();
         }
     
-        public string IdPlan { get; set; }
-        public int IdTipoContrato { get; set; }
-        public string Nombre { get; set; }
-        public double PrimaBase { get; set; }
-        public string PolizaActual { get; set; }
+        public int IdRegion { get; set; }
+        public string NombreRegion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Contrato> Contrato { get; set; }
-        public virtual TipoContrato TipoContrato { get; set; }
+        public virtual ICollection<RegionComuna> RegionComuna { get; set; }
     }
 }
