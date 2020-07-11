@@ -68,9 +68,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -154,6 +154,10 @@
     <Resource Include="Imagenes\User.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeLife.Datos\BeLife.Datos.csproj">
+      <Project>{a318fc50-9ce0-445f-b9a1-08fda9b27ee8}</Project>
+      <Name>BeLife.Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BeLife.Negocio\BeLife.Negocio.csproj">
       <Project>{f5ee0442-3da5-4374-912e-1721c28d4269}</Project>
       <Name>BeLife.Negocio</Name>

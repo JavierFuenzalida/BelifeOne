@@ -72,18 +72,29 @@ C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\
 C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CopyComplete
 C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.dll
 C:\Users\javie\Desktop\DUOC\Kraken\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.pdb
+<<<<<<< HEAD
+=======
+C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.dll
+C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CoreCompileInputs.cache
+>>>>>>> JavierBaez
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.dll.config
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.dll
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Negocio.pdb
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.dll
+<<<<<<< HEAD
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.dll
+=======
+>>>>>>> JavierBaez
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.pdb
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\BeLife.Datos.dll.config
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.xml
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CoreCompileInputs.cache
+=======
+>>>>>>> JavierBaez
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.csproj.CopyComplete
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.dll
 C:\Users\javie\Desktop\DUOC\belife 2.0\BelifeOne\BelifeWPf\BeLife.Negocio\obj\Debug\BeLife.Negocio.pdb
