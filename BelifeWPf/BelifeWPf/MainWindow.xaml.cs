@@ -48,6 +48,10 @@ namespace BelifeWPf
             CargarContratos();
             CargarPoliza();
 
+
+            Vehiculo auto = new Vehiculo();
+            lbx_marca.ItemsSource = auto.listaMarcas();
+
         }
 
         private void Btn_despliegaFly_Click(object sender, RoutedEventArgs e)
@@ -388,7 +392,7 @@ namespace BelifeWPf
             CbCodigoPlan.ItemsSource = plan.ReadAllPlan();
 
             /* Configura los datos en el ComboBOx */
-            CbCodigoPlan.DisplayMemberPath = "IdPlan"; //Propiedad para mostrar
+            CbCodigoPlan.DisplayMemberPath = "Nombre"; //Propiedad para mostrar
             CbCodigoPlan.SelectedValuePath = "IdPlan"; //Propiedad con el valor a rescatar
 
             CbCodigoPlan.SelectedIndex = 0; //Posiciona en el primer registro
@@ -814,15 +818,7 @@ namespace BelifeWPf
         }
         
 
-        private void CbCodigoPlan_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
-
-        private void CbCodigoPlan_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void Btnrefresliscon(object sender, MouseButtonEventArgs e)
         {
@@ -917,7 +913,31 @@ namespace BelifeWPf
             }
         }
 
+        private void Rb_vehiculo_Checked(object sender, RoutedEventArgs e)
+        {
+            if (rb_vehiculo != null)
+            {
+                tc_Secundario.SelectedIndex = 1;
+            }
+        }
 
+        private void Rb_vida_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (rb_vida != null)
+            {
+                tc_Secundario.SelectedIndex = 0;
+            }
+        }
+
+        private void Lbx_marca_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Vehiculo auto = new Vehiculo();
+            var item = (ListBox)sender;
+            var Vehiculo = (BeLife.Datos.MarcaVehiculo)item.SelectedItem;
+
+            lbx_modelo.ItemsSource = auto.listaModelos(Vehiculo.IdMarca);
+            lbx_modelo.Items.Refresh();
+        }
     }
     
 }

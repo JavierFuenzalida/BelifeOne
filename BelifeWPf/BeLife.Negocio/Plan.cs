@@ -34,10 +34,17 @@ namespace BeLife.Negocio
             try
             {
                 /* Se obtiene todos los registro desde la tabla */
-                var listadoDatos = bbdd.Plan.ToList();
+                //var listadoDatos = bbdd.Plan.ToList();
+
+                var listadoDatos = (from d in bbdd.Plan
+                                    where d.IdPlan != "HOG01" && d.IdPlan != "HOG02" && d.IdPlan != "HOG03"
+                                    select d).ToList();
+
+
 
                 /* Se convierte el listado de datos en un listado de negocio */
                 List<Plan> listadoPlan = GenerarListado(listadoDatos);
+
 
                 /* Se retorna la lista */
                 return listadoPlan;

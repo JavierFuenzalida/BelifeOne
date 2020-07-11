@@ -29,7 +29,7 @@
                                         Tab item 1
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-            <mah:MetroTabItem Name="TBI1" Header="" Margin="360,48,-361,-47">
+            <mah:MetroTabItem Name="TBI1" Header="" Margin="846,-70,-847,71">
                 <Grid>
 
                     <Border Style="{DynamicResource BarraInferior}"/>
@@ -108,7 +108,7 @@
                                         Tab item 2
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-            <mah:MetroTabItem Name="TBI2" Header="" Margin="360,48,-361,-47">
+            <mah:MetroTabItem Name="TBI2" Header="" Margin="972,-71,-973,72">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}"/>
                     <!--<Image  Style="{DynamicResource LogoBeLife}" Source="Imagenes/BeLife-logo.png"/>-->
@@ -159,13 +159,187 @@
                                         Tab item 3
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-            <mah:MetroTabItem Name="TBI3" Header="" Margin="360,48,-361,-47">
+            <mah:MetroTabItem Name="TBI3" Header="" Margin="535,-101,-536,102">
                 <Grid>
-                    <Border Style="{DynamicResource BarraInferior}"/>
+
+                    <RadioButton x:Name="rb_vida" Margin="126,20,723,488" Content="Contrato de Vida" FontSize="16" Checked="Rb_vida_Checked_1"/>
+                    <RadioButton x:Name="rb_vehiculo" Margin="343,19,470,488" Content="Contrato de Vehiculo" FontSize="16" Checked="Rb_vehiculo_Checked"/>
+                    <mah:MetroTabControl x:Name="tc_Secundario" Margin="0,27,0,77" Background="Transparent">
+                        <mah:MetroTabItem Header="●Contratos" Margin="139,-128,-139,128">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="221*"/>
+                                    <ColumnDefinition Width="164*"/>
+                                    <ColumnDefinition Width="615*"/>
+                                </Grid.ColumnDefinitions>
+                                <!--LABEL-->
+                                <Label Style="{DynamicResource Label}" Content="Nº Contrato:" Margin="74,59,4,319" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Rut Cliente:" Margin="85,99,4,279" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Nombre:" Margin="109,139,4,239" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Tipo de Plan:" Margin="69,179,4,199" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Poliza:" Margin="133,219,4,159" Width="Auto"/>
+
+                                <Label Style="{DynamicResource Label}" Content="Observaciones:" Margin="48,299,4,79" RenderTransformOrigin="0.491,-0.075" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Fecha Creaciòn:" Margin="43,259,4,119" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Inicio Vigencia:" Margin="159,110,287,268" Width="Auto" Grid.Column="2"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Fin Vigencia:" Margin="182,150,287,228" Width="Auto" Grid.Column="2"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Prima Anual:" Margin="182,190,287,188" Width="Auto" Grid.Column="2"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Prima Mensual:" Margin="155,230,287,148" Width="Auto" Grid.Column="2"></Label>
+                                <Label x:Name="lb_Declara" Style="{DynamicResource Label}" Content="Declaraciòn Salud:" Margin="126,270,287,108" Width="Auto" Grid.Column="2"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Vigente:" Margin="224,310,287,68" Width="Auto" Grid.Column="2"></Label>
+                                <!--End LABEL-->
+
+                                <!--IMPUT-->
+                                <Border Style="{DynamicResource Input1}" Margin="211,59,512,319" Width="Auto" Grid.ColumnSpan="3">
+                                    <TextBox x:Name="TxNContrato"  Style="{DynamicResource Input2}" Margin="-1,-1,16,-1" Width="Auto"/>
+                                </Border>
+                                <Border  Style="{DynamicResource Input1}" Margin="211,102,512,276" Width="Auto" Grid.ColumnSpan="3">
+                                    <TextBox x:Name="TxRutCliente" Style="{DynamicResource Input2}" Margin="-1,1,15,-1" Width="Auto" Height="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,179,512,199" Width="Auto" Grid.ColumnSpan="3">
+                                    <ComboBox Name="CbCodigoPlan" Width="255" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="3,-1,0,1" />
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,221,512,157" Width="Auto" Grid.ColumnSpan="3">
+                                    <TextBox x:Name="TxPoliza"  Style="{DynamicResource Input2}" Margin="-1,-1,17,-1" Width="Auto" IsReadOnly="True"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="315,142,23,236" Width="Auto" Grid.Column="2">
+                                    <DatePicker Name="DpFechaFInVig" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="-1,0,18,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="314,98,24,280" Width="Auto" Grid.Column="2">
+                                    <DatePicker Name="DpFechaInicioVig" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="-1,0,16,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,262,512,116" Width="Auto" Grid.ColumnSpan="3">
+                                    <DatePicker Name="DpFechaCreacion" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="-1,0,18,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,311,512,10" Height="Auto" Width="Auto" Grid.ColumnSpan="3">
+                                    <TextBox x:Name="TxObservaciones" Style="{DynamicResource Input2}" Height="Auto" Margin="1,-1,17,-1" MinLines="4" Width="Auto" />
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="315,187,22,191" Width="Auto" Grid.Column="2">
+                                    <TextBox x:Name="TxPrimaAnual" Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,13,-2" Width="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="315,232,22,146" Width="Auto" Grid.Column="2">
+                                    <TextBox x:Name="TxPrimaMensual" Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,12,-2" Width="Auto"/>
+                                </Border>
+                                <CheckBox x:Name="ChBVigencia" Background="White" Margin="328,323,269,79" IsEnabled="False" RenderTransformOrigin="0.5,0.5" Grid.Column="2"></CheckBox>
+                                <CheckBox x:Name="ChBDeclaracionSalud" Background="White" Margin="328,283,269,119" Grid.Column="2"/>
+                                <Label Name="LbNombreCliente" Style="{DynamicResource Label}" Content="" Margin="213,144,512,242" Width="Auto" FontSize="18" Height="Auto" Grid.ColumnSpan="3" />
+                                <!--End IMPUT-->
+
+                                <!--BOTON-->
+                                <Button x:Name="BtBuscarContrato" Style="{DynamicResource boton360Contraste1}" Margin="108,58,466,318" Height="42" Width="41" Click="BtBuscarContrato_Click" Grid.Column="2">
+                                    <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                                </Button>
+                                <Button Style="{DynamicResource BotonCurvo2}" Margin="159,10,234,360"  Click="BtnBuscListadoCon" Height="Auto" Width="Auto" Grid.Column="2">
+                                    <StackPanel Orientation="Horizontal" Width="212" Height="28" >
+                                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Width="25" Height="Auto"/>
+                                        <TextBlock Text="  Listado Contratos" Margin="0,0,9,-6" HorizontalAlignment="Right" Width="169" FontSize="20"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Style="{DynamicResource BotonCurvo2}" Margin="399,10,4,360"   Click="BtnBuscListadoCli" Height="Auto" Width="Auto" Grid.Column="2">
+                                    <StackPanel Orientation="Horizontal" Width="195" >
+                                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Height="25" Width="25"/>
+                                        <TextBlock Text="  Listado Clientes" Margin="0,4,9,9" Height="24" HorizontalAlignment="Right" Width="154" FontSize="20"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <!--End BOTON-->
+
+                            </Grid>
+                        </mah:MetroTabItem>
+                        <mah:MetroTabItem Header="●Datos Vehiculo" Margin="0,-129,-171,129" HorizontalAlignment="Right" Width="250">
+                            <Grid>
+                                <!--LABEL-->
+                                <Label Style="{DynamicResource Label}" Content="Nº Contrato:" Margin="74,42,783,336" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Rut Cliente:" Margin="85,82,789,296" Width="Auto"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Nombre:" Margin="109,122,789,256" Width="Auto"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Tipo de Plan:" Margin="69,162,789,216" Width="Auto"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Poliza:" Margin="133,202,789,176" Width="Auto"></Label>
+                                <Label Style="{DynamicResource Label}" Content="Observaciones:" Margin="48,282,794,96" RenderTransformOrigin="0.491,-0.075" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Fecha Creaciòn:" Margin="43,242,789,136" Width="Auto"></Label>
+
+                                <Label Style="{DynamicResource Label}" Content="Inicio Vigencia:" Margin="551,43,284,335" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Fin Vigencia:" Margin="574,83,284,295" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Prima Anual:" Margin="574,128,284,250" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Prima Mensual:" Margin="547,172,284,206" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Marca:" Margin="520,232,404,146" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Modelo:" Margin="742,232,161,146" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Patente:" Margin="617,327,295,51" Width="Auto"/>
+                                <Label Style="{DynamicResource Label}" Content="Año:" Margin="650,373,295,5" Width="Auto"/>
+
+                                <!--End LABEL-->
+
+                                <!--IMPUT-->
+                                <Border Style="{DynamicResource Input1}" Margin="211,41,512,337" Width="Auto">
+                                    <TextBox Style="{DynamicResource Input2}" Margin="-1,-1,16,-1" Width="Auto"/>
+                                </Border>
+                                <Border  Style="{DynamicResource Input1}" Margin="211,85,512,293" Width="Auto">
+                                    <TextBox  Style="{DynamicResource Input2}" Margin="-1,1,15,-1" Width="Auto" Height="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,162,512,216" Width="Auto">
+                                    <ComboBox Width="255" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="3,-1,0,1" />
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,204,512,174" Width="Auto">
+                                    <TextBox  Style="{DynamicResource Input2}" Margin="-1,-1,17,-1" Width="Auto" IsReadOnly="True"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,245,512,133" Width="Auto">
+                                    <DatePicker  Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="-1,0,18,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="211,294,512,50" Height="Auto" Width="Auto">
+                                    <TextBox  Style="{DynamicResource Input2}" Height="Auto" Margin="1,-1,17,19" MinLines="4" Width="Auto" />
+                                </Border>
+
+                                <Border Style="{DynamicResource Input1}" Margin="707,43,16,335" Width="Auto">
+                                    <DatePicker Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="-1,0,16,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="707,88,16,290" Width="Auto">
+                                    <DatePicker Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" Margin="-1,0,16,-1"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="707,133,18,245" Width="Auto">
+                                    <TextBox Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,13,-2" Width="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="707,178,18,200" Width="Auto">
+                                    <TextBox Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,13,-2" Width="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="707,328,18,50" Width="Auto">
+                                    <TextBox Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,13,-2" Width="Auto"/>
+                                </Border>
+                                <Border Style="{DynamicResource Input1}" Margin="707,373,18,5" Width="Auto">
+                                    <TextBox Style="{DynamicResource Input2}" IsReadOnly="True" Margin="-1,0,13,-2" Width="Auto"/>
+                                </Border>
+                                <ListBox x:Name="lbx_marca" Margin="597,232,263,96" DisplayMemberPath="Descripcion" SelectionChanged="Lbx_marca_SelectionChanged"/>
+                                <ListBox x:Name="lbx_modelo" Margin="839,232,21,96" DisplayMemberPath="Descripcion"/>
+
+                                <Button Style="{DynamicResource boton360Contraste1}" Margin="493,43,466,333" Height="42" Width="41" Click="BtBuscarContrato_Click">
+                                    <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
+                                </Button>
+
+                                <Button Style="{DynamicResource BotonCurvo2}" Margin="493,5,295,382"  Click="BtnBuscListadoCon" Height="Auto" Width="Auto">
+                                    <StackPanel Orientation="Horizontal" Width="212" Height="28" >
+                                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Width="48" Height="Auto" Margin="0,3" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="  Listado Contratos" Margin="0,0,9,0" HorizontalAlignment="Center" Width="151" FontSize="18"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Style="{DynamicResource BotonCurvo2}" Margin="742,5,39,382"   Click="BtnBuscListadoCli" Height="Auto" Width="Auto">
+                                    <StackPanel Orientation="Horizontal" Width="195" >
+                                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Height="22" Width="37" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="  Listado Clientes" Margin="0,0,9,0" Height="27" HorizontalAlignment="Center" Width="158" FontSize="18"/>
+                                    </StackPanel>
+                                </Button>
+
+
+
+
+
+                            </Grid>
+                        </mah:MetroTabItem>
+
+                    </mah:MetroTabControl>
+                    <!--BARRA iNFERIOR + BOTONES + TITULO-->
                     <Border Style="{DynamicResource BarraTitulos}">
                         <TextBlock FontSize="22" FontFamily="Nirmala UI" Text="Registro de Contratos" Style="{DynamicResource text1}" HorizontalAlignment="Center"/>
                     </Border>
-                    <!--BOTON-->
+                    <Border Style="{DynamicResource BarraInferior}"/>
+
                     <Button x:Name="BtLimpiarContrato" Style="{DynamicResource BotonCurvo1}" Margin="820,506,10,11" Click="BtLimpiarContrato_Click">
                         <StackPanel Orientation="Horizontal" Width="154">
                             <Image Style="{DynamicResource ResourceKey=ImagenBotonLIMPIAR}" Height="40" />
@@ -190,73 +364,7 @@
                             <TextBlock Text="         Crear" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="116"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="BtBuscarContrato" Style="{DynamicResource boton360Contraste1}" Margin="495,133,466,390" Height="38" Width="39" Click="BtBuscarContrato_Click">
-                        <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR1}" RenderTransformOrigin="-0.38,0.4"/>
-                    </Button>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="544,73,230,448"  Click="BtnBuscListadoCon" Height="Auto" Width="Auto">
-                        <StackPanel Orientation="Horizontal" Width="212" >
-                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}" Width="39"/>
-                            <TextBlock Text="  Listado Contratos" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="171" FontSize="20"/>
-                        </StackPanel>
-                    </Button>
-                    <Button Style="{DynamicResource BotonCurvo2}" Margin="780,74,10,447"   Click="BtnBuscListadoCli" Height="Auto" Width="Auto">
-                        <StackPanel Orientation="Horizontal" Width="195" >
-                            <Image Style="{DynamicResource ResourceKey=ImagenBotonBUSCAR}"/>
-                            <TextBlock Text="  Listado Clientes" Margin="0,4,9,9" Height="37" HorizontalAlignment="Right" Width="154" FontSize="20"/>
-                        </StackPanel>
-                    </Button>
-                    <!--BOTON-->
-
-                    <!--LABEL-->
-                    <Label Style="{DynamicResource Label}" Content="Nº Contrato:" Margin="83,134,697,387"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Rut Cliente:" Margin="93,190,687,331"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Tipo de Plan:" Margin="75,297,705,224"></Label>
-
-                    <Label Style="{DynamicResource Label}" Content="Observaciones:" Margin="54,350,726,171" RenderTransformOrigin="0.491,-0.075"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Fecha Creaciòn:" Margin="50,247,730,274"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Inicio Vigencia:" Margin="581,192,199,329"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Fin Vigencia:" Margin="604,252,176,269"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Prima Anual:" Margin="604,310,176,211"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Prima Mensual:" Margin="579,370,201,151"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Declaraciòn Salud:" Margin="550,431,230,90"></Label>
-                    <Label Style="{DynamicResource Label}" Content="Vigente:" Margin="790,431,-10,90"></Label>
-                    <!--LABEL-->
-
-
-                    <!--IMPUT-->
-                    <Border Style="{DynamicResource Input1}" Margin="216,132,530,389">
-                        <TextBox x:Name="TxNContrato"  Style="{DynamicResource Input2}" Margin="1,0,1,-2"/>
-                    </Border>
-                    <Border  Style="{DynamicResource Input1}" Margin="216,190,530,331">
-                        <TextBox x:Name="TxRutCliente" Style="{DynamicResource Input2}" Margin="-1,1,3,-3"/>
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="216,298,530,223">
-                        <ComboBox Name="CbCodigoPlan" Width="250" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="3,-1,-1,1" SelectionChanged="CbCodigoPlan_SelectionChanged_1"/>
-                    </Border>
-
-                    <Border Style="{DynamicResource Input1}" Margin="736,250,10,271">
-                        <DatePicker Name="DpFechaFInVig" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False"/>
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="736,192,10,329">
-                        <DatePicker Name="DpFechaInicioVig" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center"/>
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="216,245,530,276">
-                        <DatePicker Name="DpFechaCreacion" Width="240" Height="40" Foreground="Black" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" VerticalContentAlignment="Center" IsEnabled="False" Margin="6,0,6,-2"/>
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="216,350,530,101" Height="Auto" Width="Auto">
-                        <TextBox x:Name="TxObservaciones" Style="{DynamicResource Input2}" Height="Auto" Margin="1,9" MinLines="4" />
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="736,310,10,211">
-                        <TextBox x:Name="TxPrimaAnual" Style="{DynamicResource Input2}" IsReadOnly="True"/>
-                    </Border>
-                    <Border Style="{DynamicResource Input1}" Margin="736,370,10,151">
-                        <TextBox x:Name="TxPrimaMensual" Style="{DynamicResource Input2}" IsReadOnly="True"/>
-                    </Border>
-                    <CheckBox x:Name="ChBVigencia" Background="White" Margin="881,440,101,101" IsEnabled="False"/>
-                    <CheckBox x:Name="ChBDeclaracionSalud" Background="White" Margin="736,440,246,101"/>
-                    <Label Name="LbNombreCliente" Style="{DynamicResource Label}" Content="" Margin="116,73,530,448" Width="Auto" FontSize="18" />
-                    <!--IMPUT-->
-
+                    <!--End BARRA iNFERIOR + BOTONES + TITULO-->
                 </Grid>
             </mah:MetroTabItem>
 
@@ -264,7 +372,7 @@
                                         Tab item 4
             |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 
-            <mah:MetroTabItem Name="TBI4" Header="" Margin="360,48,-361,-47">
+            <mah:MetroTabItem Name="TBI4" Header="" Margin="249,-69,-250,70">
                 <Grid>
                     <Border Style="{DynamicResource BarraInferior}" HorizontalAlignment="Left" Margin="0" Width="1000"/>
 
